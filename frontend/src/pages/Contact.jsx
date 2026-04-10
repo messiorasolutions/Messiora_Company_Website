@@ -10,16 +10,18 @@ const Contact = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const API = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch('http://localhost:5000/api/contact', {
+            const res = await fetch(`${API}/api/contact`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
             });
             if (res.ok) {
-                setStatus('Success! Your message has been sent to our engineers.');
+                setStatus('Success! Your message has been sent to our team.');
                 setFormData({ name: '', email: '', phone: '', message: '' });
             } else {
                 setStatus('Error sending message. Please try again or email us directly.');

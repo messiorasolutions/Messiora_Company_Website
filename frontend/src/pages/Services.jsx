@@ -7,9 +7,11 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
+        const API = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
         const fetchServices = async () => {
             try {
-                const res = await fetch('http://localhost:5000/api/services');
+                const res = await fetch(`${API}/api/services`);
                 const data = await res.json();
                 if (data.length > 0) {
                     setServices(data);

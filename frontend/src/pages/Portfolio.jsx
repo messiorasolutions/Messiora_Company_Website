@@ -7,9 +7,11 @@ const Portfolio = () => {
     const [filter, setFilter] = useState('All');
 
     useEffect(() => {
+        const API = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
         const fetchPortfolio = async () => {
             try {
-                const res = await fetch('http://localhost:5000/api/portfolio');
+                const res = await fetch(`${API}/api/portfolio`);
                 const data = await res.json();
                 if (data.length > 0) setProjects(data);
                 else setStaticProjects();

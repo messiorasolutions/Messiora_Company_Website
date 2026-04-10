@@ -10,9 +10,11 @@ const Messages = () => {
         fetchMessages();
     }, []);
 
+    const API = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
     const fetchMessages = async () => {
         try {
-            const res = await fetch('http://localhost:5000/api/contact', {
+            const res = await fetch(`${API}/api/contact`, {
                 headers: { Authorization: `Bearer ${admin.token}` }
             });
             const data = await res.json();
@@ -24,7 +26,7 @@ const Messages = () => {
 
     const markAsRead = async (id) => {
         try {
-            await fetch(`http://localhost:5000/api/contact/${id}/read`, {
+            await fetch(`${API}/api/contact/${id}/read`, {
                 method: 'PUT',
                 headers: { Authorization: `Bearer ${admin.token}` }
             });
@@ -39,10 +41,10 @@ const Messages = () => {
             <h1 className="text-3xl font-bold mb-6">Contact Messages</h1>
             <div className="grid grid-cols-1 gap-6">
                 {messages.map((msg) => (
-                    <div key={msg._id} className={`p-6 rounded-xl border ${msg.readStatus ? 'bg-black-900 border-silver-400/20' : 'bg-black-800 border-gold-600/40 shadow-lg'}`}>
+                    <div key={msg._id} className={`p-6 rounded-xl border ${msg.readStatus ? 'bg-black-900 border-silver-400/20' : 'bg-black-800 border-sky-400/40 shadow-lg'}`}>
                         <div className="flex justify-between items-start mb-4">
                             <div>
-                                <h3 className="text-xl font-bold text-gold-500">{msg.name}</h3>
+                                <h3 className="text-xl font-bold text-sky-400">{msg.name}</h3>
                                 <div className="flex space-x-4 text-sm text-silver-400 mt-2">
                                     <span className="flex items-center"><FiMail className="mr-2" /> {msg.email}</span>
                                     {msg.phone && <span className="flex items-center"><FiPhone className="mr-2" /> {msg.phone}</span>}
@@ -51,7 +53,7 @@ const Messages = () => {
                             {!msg.readStatus && (
                                 <button
                                     onClick={() => markAsRead(msg._id)}
-                                    className="bg-gold-500/10 text-gold-500 border border-gold-500/30 px-3 py-1 rounded hover:bg-gold-500 hover:text-black-900 transition-colors flex items-center space-x-2"
+                                    className="bg-sky-500/10 text-sky-400 border border-sky-500/30 px-3 py-1 rounded hover:bg-sky-500 hover:text-white transition-colors flex items-center space-x-2"
                                 >
                                     <FiCheck /> <span>Mark Read</span>
                                 </button>
