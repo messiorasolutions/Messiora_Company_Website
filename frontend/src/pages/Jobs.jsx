@@ -17,6 +17,8 @@ const Jobs = () => {
         }
     };
 
+    const API = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -24,7 +26,7 @@ const Jobs = () => {
             if (file) {
                 const fd = new FormData();
                 fd.append('cv', file);
-                const uploadRes = await fetch('http://localhost:5000/api/upload/cv', {
+                const uploadRes = await fetch(`${API}/api/upload/cv`, {
                     method: 'POST',
                     body: fd
                 });
@@ -32,7 +34,7 @@ const Jobs = () => {
                 cvUrl = uploadData.url;
             }
 
-            const res = await fetch('http://localhost:5000/api/jobs', {
+            const res = await fetch(`${API}/api/jobs`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ ...formData, cvUrl: cvUrl || '/placeholder.pdf' })

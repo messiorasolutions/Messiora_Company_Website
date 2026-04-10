@@ -6,9 +6,11 @@ const Blog = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
+        const API = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
         const fetchPosts = async () => {
             try {
-                const res = await fetch('http://localhost:5000/api/blog');
+                const res = await fetch(`${API}/api/blog`);
                 const data = await res.json();
                 if (data.length > 0) setPosts(data);
                 else setStaticPosts();

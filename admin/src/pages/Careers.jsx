@@ -10,9 +10,11 @@ const Careers = () => {
         fetchJobs();
     }, []);
 
+    const API = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
     const fetchJobs = async () => {
         try {
-            const res = await fetch('http://localhost:5000/api/jobs', {
+            const res = await fetch(`${API}/api/jobs`, {
                 headers: { Authorization: `Bearer ${admin.token}` }
             });
             const data = await res.json();
@@ -24,7 +26,7 @@ const Careers = () => {
 
     const updateStatus = async (id, status) => {
         try {
-            await fetch(`http://localhost:5000/api/jobs/${id}/status`, {
+            await fetch(`${API}/api/jobs/${id}/status`, {
                 method: 'PUT',
                 headers: {
                     Authorization: `Bearer ${admin.token}`,
@@ -50,10 +52,10 @@ const Careers = () => {
             <h1 className="text-3xl font-bold mb-6">Job Applications</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {jobs.map((job) => (
-                    <div key={job._id} className="p-6 bg-black-800 rounded-xl border border-gold-600/20 shadow-lg">
+                    <div key={job._id} className="p-6 bg-black-800 rounded-xl border border-sky-400/20 shadow-lg">
                         <div className="flex justify-between items-start mb-4 border-b border-white/5 pb-4">
                             <div>
-                                <h3 className="text-xl font-bold text-gold-500 flex items-center"><FiBriefcase className="mr-2" /> {job.jobTitle}</h3>
+                                <h3 className="text-xl font-bold text-sky-400 flex items-center"><FiBriefcase className="mr-2" /> {job.jobTitle}</h3>
                                 <div className="mt-2 text-silver-300">
                                     <span className="flex items-center mb-1"><FiUser className="mr-2" /> {job.applicantName}</span>
                                     <span className="text-sm block ml-6">{job.email}</span>
@@ -65,17 +67,17 @@ const Careers = () => {
                         </div>
                         <div className="flex justify-between items-center mt-4">
                             <a
-                                href={`http://localhost:5000${job.cvUrl}`}
+                                href={`${API}${job.cvUrl}`}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="flex items-center text-gold-400 hover:text-gold-500 transition-colors"
+                                className="flex items-center text-sky-400 hover:text-sky-300 transition-colors"
                             >
                                 <FiDownload className="mr-2" /> Download CV
                             </a>
                             <select
                                 value={job.status}
                                 onChange={(e) => updateStatus(job._id, e.target.value)}
-                                className="bg-black-900 border border-silver-400/20 rounded px-2 py-1 text-sm text-silver-300 outline-none focus:border-gold-500"
+                                className="bg-black-900 border border-silver-400/20 rounded px-2 py-1 text-sm text-silver-300 outline-none focus:border-sky-400"
                             >
                                 <option value="Pending">Pending</option>
                                 <option value="Reviewed">Reviewed</option>

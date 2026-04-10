@@ -9,7 +9,24 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+// Allow multiple origins via CLIENT_URLS (comma-separated) or single CLIENT_URL.
+const CLIENT_URL = process.env.CLIENT_URL || '';
+const CLIENT_URLS = process.env.CLIENT_URLS || '';
+let allowedOrigins = [];
+if (CLIENT_URLS) allowedOrigins = CLIENT_URLS.split(',').map(s => s.trim());
+if (CLIENT_URL) allowedOrigins.push(CLIENT_URL);
+
+app.use(cors({
+    origin: (origin, callback) => {
+        // allow requests with no origin (like mobile apps or curl)
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.length === 0) return callback(null, true); // allow all if none configured
+        if (allowedOrigins.includes(origin)) return callback(null, true);
+        return callback(new Error('CORS policy: Origin not allowed'), false);
+    },
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 
 // Basic Route
