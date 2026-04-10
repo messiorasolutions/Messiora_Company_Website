@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FiUploadCloud, FiBriefcase, FiUser, FiMail, FiPhone } from 'react-icons/fi';
 
 const Jobs = () => {
     const [formData, setFormData] = useState({ jobTitle: '', applicantName: '', email: '', phone: '' });
@@ -19,7 +21,6 @@ const Jobs = () => {
         e.preventDefault();
         try {
             let cvUrl = '';
-            // Upload CV first
             if (file) {
                 const fd = new FormData();
                 fd.append('cv', file);
@@ -31,7 +32,6 @@ const Jobs = () => {
                 cvUrl = uploadData.url;
             }
 
-            // Submit application
             const res = await fetch('http://localhost:5000/api/jobs', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -50,50 +50,92 @@ const Jobs = () => {
         }
     };
 
-    return (
-        <div className="py-16 w-full bg-white text-gray-900 border-t border-gray-200">
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-4">Careers</h2>
-                    <p className="text-lg text-gray-600">Join Our Team</p>
-                    <hr className="w-24 mx-auto my-4 border-t-2 border-blue-600" />
-                </div>
+    const fadeInUp = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    };
 
-                <div className="bg-gray-50 border border-gray-200 p-8 rounded shadow">
+    return (
+        <div className="py-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
+
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeInUp}
+                    className="text-center mb-16"
+                >
+                    <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Careers</h2>
+                    <h1 className="text-5xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 drop-shadow-md">
+                        Join Our Team
+                    </h1>
+                    <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light">
+                        Build the future. Challenge the status quo. Leave a dent in the universe with MESSIORA.
+                    </p>
+                </motion.div>
+
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeInUp}
+                    className="bg-neutral-900 border border-neutral-800 p-10 md:p-14 rounded-3xl shadow-2xl relative overflow-hidden"
+                >
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
                     {status && (
-                        <div className={`p-4 mb-6 rounded border font-medium ${status.includes('success') ? 'bg-green-100 text-green-800 border-green-300' : 'bg-red-100 text-red-800 border-red-300'}`}>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            className={`p-5 mb-8 rounded-xl border font-bold flex items-center justify-center text-center backdrop-blur-md ${status.includes('success') ? 'bg-green-500/10 text-green-400 border-green-500/30' : 'bg-red-500/10 text-red-500 border-red-500/30'}`}
+                        >
                             {status}
-                        </div>
+                        </motion.div>
                     )}
 
-                    <form onSubmit={handleSubmit} className="space-y-5">
-                        <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-1">Position Applying For</label>
-                            <input type="text" name="jobTitle" value={formData.jobTitle} onChange={handleChange} required className="w-full border border-gray-300 px-3 py-2 rounded focus:outline-none focus:border-blue-500" placeholder="E.g., Web Developer" />
-                        </div>
-                        <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-1">Full Name</label>
-                            <input type="text" name="applicantName" value={formData.applicantName} onChange={handleChange} required className="w-full border border-gray-300 px-3 py-2 rounded focus:outline-none focus:border-blue-500" />
-                        </div>
-                        <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-1">Email</label>
-                            <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full border border-gray-300 px-3 py-2 rounded focus:outline-none focus:border-blue-500" />
-                        </div>
-                        <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-1">Phone</label>
-                            <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full border border-gray-300 px-3 py-2 rounded focus:outline-none focus:border-blue-500" />
+                    <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="space-y-2">
+                                <label className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
+                                    <FiBriefcase className="text-sky-500" /> Position
+                                </label>
+                                <input type="text" name="jobTitle" value={formData.jobTitle} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner" placeholder="E.g., Senior AI Engineer" />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
+                                    <FiUser className="text-sky-500" /> Full Name
+                                </label>
+                                <input type="text" name="applicantName" value={formData.applicantName} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner" placeholder="Jane Doe" />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
+                                    <FiMail className="text-sky-500" /> Email
+                                </label>
+                                <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner" placeholder="jane@example.com" />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
+                                    <FiPhone className="text-sky-500" /> Phone
+                                </label>
+                                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner" placeholder="+1 (555) 000-0000" />
+                            </div>
                         </div>
 
-                        <div className="pt-4 border-t border-gray-200">
-                            <label className="block text-sm font-bold text-gray-700 mb-2">Upload CV (PDF, DOC)</label>
-                            <input type="file" onChange={handleFileChange} accept=".pdf,.doc,.docx" required className="w-full border border-gray-300 px-3 py-2 rounded bg-white text-gray-700" />
+                        <div className="pt-8 border-t border-neutral-800">
+                            <label className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4 block">Resume / CV (PDF, DOC)</label>
+                            <label className="flex flex-col items-center justify-center w-full h-40 border-2 border-neutral-800 border-dashed rounded-2xl cursor-pointer bg-neutral-950/50 hover:bg-neutral-800/50 hover:border-sky-500/50 transition-all group">
+                                <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                    <FiUploadCloud className="w-12 h-12 text-gray-500 group-hover:text-sky-400 mb-3 transition-colors" />
+                                    <p className="mb-2 text-sm text-gray-400 group-hover:text-white transition-colors"><span className="font-bold text-sky-500">Click to upload</span> or drag and drop</p>
+                                    <p className="text-xs text-gray-500">{file ? file.name : "PDF, DOC, DOCX"}</p>
+                                </div>
+                                <input id="dropzone-file" type="file" onChange={handleFileChange} accept=".pdf,.doc,.docx" required className="hidden" />
+                            </label>
                         </div>
 
-                        <button type="submit" className="w-full bg-blue-600 text-white font-bold py-3 mt-4 rounded hover:bg-blue-700 transition">
-                            Submit Application
-                        </button>
+                        <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} type="submit" className="w-full bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold text-lg py-5 mt-4 rounded-xl shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:shadow-[0_0_30px_rgba(56,189,248,0.6)] transition-all duration-300 tracking-wide">Submit Application</motion.button>
                     </form>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
