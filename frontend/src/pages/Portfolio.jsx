@@ -43,7 +43,7 @@ const Portfolio = () => {
     };
 
     return (
-        <div className="py-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+        <div className="pt-12 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-sky-600/5 rounded-full blur-[150px] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

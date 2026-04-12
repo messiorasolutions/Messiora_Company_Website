@@ -22,7 +22,7 @@ const About = () => {
     };
 
     return (
-        <div className="py-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+        <div className="pt-12 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-full h-[600px] bg-gradient-to-b from-sky-600/10 to-transparent pointer-events-none"></div>
 
@@ -50,8 +50,8 @@ const About = () => {
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
-                        <h3 className="text-3xl font-black text-white leading-tight">Pioneering Digital Architectures Since Inception</h3>
-                        <p className="text-gray-400 text-lg leading-relaxed">
+                        <h3 className="text-2xl font-black text-white leading-tight">Pioneering Digital Architectures Since Inception</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed font-light">
                             MESSIORA was established with a singular, unyielding purpose: to bridge the gap between complex technological capabilities and elegant user experiences.
                         </p>
                         <div className="space-y-6">
@@ -60,8 +60,8 @@ const About = () => {
                                     <FiZap size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-white mb-1">Rapid Innovation</h4>
-                                    <p className="text-gray-500">We iterate faster than the market can respond.</p>
+                                    <h4 className="text-base font-bold text-white mb-0.5">Rapid Innovation</h4>
+                                    <p className="text-gray-500 text-xs">We iterate faster than the market can respond.</p>
                                 </div>
                             </div>
                             <div className="flex gap-5 items-start">
@@ -69,8 +69,8 @@ const About = () => {
                                     <FiShield size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-white mb-1">Unyielding Security</h4>
-                                    <p className="text-gray-500">Zero-compromise approach to data integrity.</p>
+                                    <h4 className="text-base font-bold text-white mb-0.5">Unyielding Security</h4>
+                                    <p className="text-gray-500 text-xs">Zero-compromise approach to data integrity.</p>
                                 </div>
                             </div>
                             <div className="flex gap-5 items-start">
@@ -78,8 +78,8 @@ const About = () => {
                                     <FiAward size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-white mb-1">Award Winning</h4>
-                                    <p className="text-gray-500">Recognized globally for architectural excellence.</p>
+                                    <h4 className="text-base font-bold text-white mb-0.5">Award Winning</h4>
+                                    <p className="text-gray-500 text-xs">Recognized globally for architectural excellence.</p>
                                 </div>
                             </div>
                         </div>
