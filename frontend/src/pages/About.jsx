@@ -22,7 +22,7 @@ const About = () => {
     };
 
     return (
-        <div className="py-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+        <div className="pt-12 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-full h-[600px] bg-gradient-to-b from-sky-600/10 to-transparent pointer-events-none"></div>
 
@@ -34,7 +34,7 @@ const About = () => {
                     className="text-center mb-24"
                 >
                     <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Our Legacy</h2>
-                    <h1 className="text-6xl md:text-8xl font-black mb-8 leading-none">
+                    <h1 className="text-4xl md:text-5xl font-black mb-8 leading-none">
                         About <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">MESSIORA</span>
                     </h1>
                     <p className="text-2xl text-gray-400 max-w-4xl mx-auto font-light italic">
@@ -43,43 +43,43 @@ const About = () => {
                 </motion.div>
 
                 {/* Company Story */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
-                        <h3 className="text-4xl font-black text-white leading-tight">Pioneering Digital Architectures Since Inception</h3>
-                        <p className="text-gray-400 text-lg leading-relaxed">
+                        <h3 className="text-2xl font-black text-white leading-tight">Pioneering Digital Architectures Since Inception</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed font-light">
                             MESSIORA was established with a singular, unyielding purpose: to bridge the gap between complex technological capabilities and elegant user experiences.
                         </p>
                         <div className="space-y-6">
                             <div className="flex gap-5 items-start">
-                                <div className="w-12 h-12 bg-neutral-900 rounded-xl flex items-center justify-center text-sky-500 flex-shrink-0 shadow-lg border border-neutral-800">
-                                    <FiZap size={24} />
+                                <div className="w-10 h-10 bg-neutral-900 rounded-xl flex items-center justify-center text-sky-500 flex-shrink-0 shadow-lg border border-neutral-800">
+                                    <FiZap size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-white mb-1">Rapid Innovation</h4>
-                                    <p className="text-gray-500">We iterate faster than the market can respond.</p>
+                                    <h4 className="text-base font-bold text-white mb-0.5">Rapid Innovation</h4>
+                                    <p className="text-gray-500 text-xs">We iterate faster than the market can respond.</p>
                                 </div>
                             </div>
                             <div className="flex gap-5 items-start">
-                                <div className="w-12 h-12 bg-neutral-900 rounded-xl flex items-center justify-center text-blue-500 flex-shrink-0 shadow-lg border border-neutral-800">
-                                    <FiShield size={24} />
+                                <div className="w-10 h-10 bg-neutral-900 rounded-xl flex items-center justify-center text-blue-500 flex-shrink-0 shadow-lg border border-neutral-800">
+                                    <FiShield size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-white mb-1">Unyielding Security</h4>
-                                    <p className="text-gray-500">Zero-compromise approach to data integrity.</p>
+                                    <h4 className="text-base font-bold text-white mb-0.5">Unyielding Security</h4>
+                                    <p className="text-gray-500 text-xs">Zero-compromise approach to data integrity.</p>
                                 </div>
                             </div>
                             <div className="flex gap-5 items-start">
-                                <div className="w-12 h-12 bg-neutral-900 rounded-xl flex items-center justify-center text-sky-400 flex-shrink-0 shadow-lg border border-neutral-800">
-                                    <FiAward size={24} />
+                                <div className="w-10 h-10 bg-neutral-900 rounded-xl flex items-center justify-center text-sky-400 flex-shrink-0 shadow-lg border border-neutral-800">
+                                    <FiAward size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-white mb-1">Award Winning</h4>
-                                    <p className="text-gray-500">Recognized globally for architectural excellence.</p>
+                                    <h4 className="text-base font-bold text-white mb-0.5">Award Winning</h4>
+                                    <p className="text-gray-500 text-xs">Recognized globally for architectural excellence.</p>
                                 </div>
                             </div>
                         </div>
@@ -92,17 +92,26 @@ const About = () => {
                         className="grid grid-cols-2 gap-6"
                     >
                         {stats.map((stat, idx) => (
-                            <div key={idx} className="bg-neutral-900 border border-neutral-800 p-8 rounded-3xl text-center shadow-2xl hover:border-sky-500/30 transition-all group">
-                                <div className="text-4xl font-black text-sky-500 mb-2 group-hover:scale-110 transition-transform">{stat.value}</div>
-                                <div className="text-gray-500 text-sm font-bold uppercase tracking-widest">{stat.label}</div>
+                            <div key={idx} className="bg-neutral-900 border border-neutral-800 p-5 rounded-2xl text-center shadow-xl hover:border-sky-500/30 transition-all group">
+                                <div className="text-3xl font-black text-sky-500 mb-1 group-hover:scale-105 transition-transform">{stat.value}</div>
+                                <div className="text-gray-500 text-[10px] font-bold uppercase tracking-widest">{stat.label}</div>
                             </div>
                         ))}
-                        <div className="col-span-2 bg-gradient-to-br from-sky-600 to-blue-700 p-10 rounded-3xl text-center">
-                            <h4 className="text-3xl font-black text-white mb-2 italic">ZERO ERROR</h4>
-                            <p className="text-white/80 font-bold tracking-tight">THE ENGINEERING PHILOSOPHY</p>
-                        </div>
                     </motion.div>
+
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    className="mt-10 mb-24 flex justify-center"
+                >
+                    <div className="inline-flex flex-col items-center px-8 py-3.5 bg-sky-500/5 border border-sky-500/20 rounded-2xl shadow-[0_0_20px_rgba(56,189,248,0.05)] backdrop-blur-sm">
+                        <h4 className="text-xl font-black text-white italic tracking-tighter uppercase">Ultimate Precision</h4>
+                        <p className="text-sky-500/60 font-black text-[9px] uppercase tracking-[0.3em] mt-1">The Engineering Philosophy</p>
+                    </div>
+                </motion.div>
 
                 {/* Core Values */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
@@ -130,7 +139,7 @@ const About = () => {
                     whileInView={{ opacity: 1 }}
                     className="text-center max-w-5xl mx-auto p-16 bg-neutral-900 rounded-[50px] border border-neutral-800 shadow-[0_0_50px_rgba(0,0,0,0.5)]"
                 >
-                    <h3 className="text-4xl font-black mb-8 text-white">Technological Mastery</h3>
+                    <h3 className="text-3xl font-black mb-8 text-white">Technological Mastery</h3>
                     <p className="text-gray-400 text-xl mb-12 leading-relaxed max-w-3xl mx-auto font-light">
                         We leverage a military-grade tech stack centered around high-performance systems and fault-tolerant architectures.
                     </p>

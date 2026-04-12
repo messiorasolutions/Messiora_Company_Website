@@ -43,7 +43,7 @@ const Portfolio = () => {
     };
 
     return (
-        <div className="py-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+        <div className="pt-12 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-sky-600/5 rounded-full blur-[150px] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -53,9 +53,9 @@ const Portfolio = () => {
                     variants={fadeInUp}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Case Studies</h2>
-                    <h1 className="text-5xl md:text-6xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">
-                        Our Masterpieces
+                    <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Masterpieces</h2>
+                    <h1 className="text-4xl md:text-5xl font-black mb-8 leading-none text-white">
+                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">Portfolio</span>
                     </h1>
 
                     <div className="flex flex-wrap justify-center gap-3 mt-10">
@@ -103,7 +103,7 @@ const Portfolio = () => {
                                             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-sky-500 mb-2 block">
                                                 {project.category}
                                             </span>
-                                            <h3 className="text-2xl font-bold text-white group-hover:text-sky-400 transition-colors">
+                                            <h3 className="text-xl font-bold text-white group-hover:text-sky-400 transition-colors">
                                                 {project.title}
                                             </h3>
                                         </div>

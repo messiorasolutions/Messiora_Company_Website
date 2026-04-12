@@ -59,7 +59,7 @@ const Navbar = () => {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-gradient-to-r from-sky-400 to-blue-600 text-white font-black px-6 py-2.5 rounded-full text-sm shadow-[0_0_15px_rgba(56,189,248,0.3)]"
+                                className="bg-gradient-to-r from-sky-400 to-blue-600 text-white font-bold px-5 py-2 rounded-full text-xs shadow-[0_0_10px_rgba(56,189,248,0.2)]"
                             >
                                 GET QUOTE
                             </motion.button>
@@ -99,7 +99,7 @@ const Navbar = () => {
                             ))}
                             <div className="pt-4">
                                 <Link to="/contact" onClick={() => setIsOpen(false)}>
-                                    <button className="w-full bg-sky-500 text-white font-black py-4 rounded-xl">
+                                    <button className="w-full bg-sky-500 text-white font-bold py-3.5 rounded-xl text-base">
                                         GET QUOTE
                                     </button>
                                 </Link>

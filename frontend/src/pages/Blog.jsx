@@ -42,7 +42,7 @@ const Blog = () => {
     };
 
     return (
-        <div className="py-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+        <div className="pt-12 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
             {/* Background Glow */}
             <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-sky-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -54,8 +54,8 @@ const Blog = () => {
                     className="text-center mb-20"
                 >
                     <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Insights</h2>
-                    <h1 className="text-5xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 drop-shadow-md">
-                        Latest Articles
+                    <h1 className="text-4xl md:text-5xl font-black mb-6 leading-none text-white">
+                        Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">Insights</span>
                     </h1>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                         Deep dives into technology, engineering leadership, and architectural patterns.
@@ -85,7 +85,7 @@ const Blog = () => {
                                 </span>
                             </div>
 
-                            <h3 className="text-3xl font-bold mb-4 text-white group-hover:text-sky-400 transition-colors leading-tight">{post.title}</h3>
+                            <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-sky-400 transition-colors leading-tight">{post.title}</h3>
                             <p className="text-gray-400 flex-grow mb-8 leading-relaxed">{post.content}</p>
 
                             <div className="flex justify-between items-center pt-5 border-t border-neutral-800">

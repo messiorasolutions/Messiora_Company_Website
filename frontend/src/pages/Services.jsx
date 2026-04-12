@@ -70,7 +70,7 @@ const Services = () => {
     };
 
     return (
-        <div className="py-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+        <div className="pt-12 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
             <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[150px] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -81,8 +81,8 @@ const Services = () => {
                     className="text-center mb-20"
                 >
                     <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Capabilities</h2>
-                    <h1 className="text-5xl md:text-6xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">
-                        Our Precision Services
+                    <h1 className="text-4xl md:text-5xl font-black mb-8 leading-none text-white">
+                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">Precision Services</span>
                     </h1>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                         We don't just write code; we architect solutions that drive revenue and redefine industry standards.
@@ -106,7 +106,7 @@ const Services = () => {
                                 {srv.icon}
                             </div>
 
-                            <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-sky-400 transition-colors">{srv.title}</h3>
+                            <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-sky-400 transition-colors">{srv.title}</h3>
                             <p className="text-gray-400 text-lg mb-8 leading-relaxed font-light">{srv.description}</p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 flex-grow">
@@ -142,7 +142,7 @@ const Services = () => {
                     whileInView={{ opacity: 1 }}
                     className="mt-24 text-center p-12 bg-neutral-900/50 border border-neutral-800 rounded-[40px] backdrop-blur-sm"
                 >
-                    <h3 className="text-3xl font-black text-white mb-4 italic">Need Something Bespoke?</h3>
+                    <h3 className="text-2xl font-black text-white mb-4 italic">Need Something Bespoke?</h3>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
                         Our engineering team thrives on unique challenges. Tell us about your vision.
                     </p>
