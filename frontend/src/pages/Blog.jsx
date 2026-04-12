@@ -54,8 +54,8 @@ const Blog = () => {
                     className="text-center mb-20"
                 >
                     <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Insights</h2>
-                    <h1 className="text-3xl md:text-4xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 drop-shadow-md">
-                        Latest Articles
+                    <h1 className="text-4xl md:text-5xl font-black mb-6 leading-none text-white">
+                        Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">Insights</span>
                     </h1>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                         Deep dives into technology, engineering leadership, and architectural patterns.

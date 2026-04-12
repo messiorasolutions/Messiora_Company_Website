@@ -53,9 +53,9 @@ const Portfolio = () => {
                     variants={fadeInUp}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Case Studies</h2>
-                    <h1 className="text-3xl md:text-4xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">
-                        Our Masterpieces
+                    <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Masterpieces</h2>
+                    <h1 className="text-4xl md:text-5xl font-black mb-8 leading-none text-white">
+                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">Portfolio</span>
                     </h1>
 
                     <div className="flex flex-wrap justify-center gap-3 mt-10">

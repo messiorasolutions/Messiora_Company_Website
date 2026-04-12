@@ -48,7 +48,7 @@ const Contact = () => {
                     className="text-center mb-24"
                 >
                     <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Connectivity</h2>
-                    <h1 className="text-4xl md:text-6xl font-black mb-8 leading-none tracking-tighter">
+                    <h1 className="text-4xl md:text-5xl font-black mb-8 leading-none tracking-tighter">
                         GET IN <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">TOUCH</span>
                     </h1>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light">

@@ -69,8 +69,8 @@ const Jobs = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Careers</h2>
-                    <h1 className="text-3xl md:text-4xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 drop-shadow-md">
-                        Join Our Team
+                    <h1 className="text-4xl md:text-5xl font-black mb-6 leading-none text-white">
+                        Join <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">Our Team</span>
                     </h1>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light">
                         Build the future. Challenge the status quo. Leave a dent in the universe with MESSIORA.
