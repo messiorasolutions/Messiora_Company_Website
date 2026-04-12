@@ -69,7 +69,7 @@ const Jobs = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Careers</h2>
-                    <h1 className="text-5xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 drop-shadow-md">
+                    <h1 className="text-3xl md:text-4xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 drop-shadow-md">
                         Join Our Team
                     </h1>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light">
@@ -101,41 +101,41 @@ const Jobs = () => {
                                 <label className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
                                     <FiBriefcase className="text-sky-500" /> Position
                                 </label>
-                                <input type="text" name="jobTitle" value={formData.jobTitle} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner" placeholder="E.g., Senior AI Engineer" />
+                                <input type="text" name="jobTitle" value={formData.jobTitle} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner text-sm" placeholder="E.g., Senior AI Engineer" />
                             </div>
                             <div className="space-y-2">
                                 <label className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
                                     <FiUser className="text-sky-500" /> Full Name
                                 </label>
-                                <input type="text" name="applicantName" value={formData.applicantName} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner" placeholder="Jane Doe" />
+                                <input type="text" name="applicantName" value={formData.applicantName} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner text-sm" placeholder="Jane Doe" />
                             </div>
                             <div className="space-y-2">
                                 <label className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
                                     <FiMail className="text-sky-500" /> Email
                                 </label>
-                                <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner" placeholder="jane@example.com" />
+                                <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner text-sm" placeholder="jane@example.com" />
                             </div>
                             <div className="space-y-2">
                                 <label className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
                                     <FiPhone className="text-sky-500" /> Phone
                                 </label>
-                                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner" placeholder="+1 (555) 000-0000" />
+                                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner text-sm" placeholder="+1 (555) 000-0000" />
                             </div>
                         </div>
 
                         <div className="pt-8 border-t border-neutral-800">
                             <label className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4 block">Resume / CV (PDF, DOC)</label>
-                            <label className="flex flex-col items-center justify-center w-full h-40 border-2 border-neutral-800 border-dashed rounded-2xl cursor-pointer bg-neutral-950/50 hover:bg-neutral-800/50 hover:border-sky-500/50 transition-all group">
+                            <label className="flex flex-col items-center justify-center w-full h-28 border-2 border-neutral-800 border-dashed rounded-2xl cursor-pointer bg-neutral-950/50 hover:bg-neutral-800/50 hover:border-sky-500/50 transition-all group">
                                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                    <FiUploadCloud className="w-12 h-12 text-gray-500 group-hover:text-sky-400 mb-3 transition-colors" />
-                                    <p className="mb-2 text-sm text-gray-400 group-hover:text-white transition-colors"><span className="font-bold text-sky-500">Click to upload</span> or drag and drop</p>
+                                    <FiUploadCloud className="w-10 h-10 text-gray-500 group-hover:text-sky-400 mb-2 transition-colors" />
+                                    <p className="mb-1 text-xs text-gray-400 group-hover:text-white transition-colors"><span className="font-bold text-sky-500">Click to upload</span> or drag and drop</p>
                                     <p className="text-xs text-gray-500">{file ? file.name : "PDF, DOC, DOCX"}</p>
                                 </div>
                                 <input id="dropzone-file" type="file" onChange={handleFileChange} accept=".pdf,.doc,.docx" required className="hidden" />
                             </label>
                         </div>
 
-                        <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} type="submit" className="w-full bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold text-lg py-5 mt-4 rounded-xl shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:shadow-[0_0_30px_rgba(56,189,248,0.6)] transition-all duration-300 tracking-wide">Submit Application</motion.button>
+                        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} type="submit" className="px-12 py-3.5 mx-auto block w-max bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold text-base rounded-full shadow-[0_5px_15px_rgba(56,189,248,0.2)] hover:shadow-[0_8px_25px_rgba(56,189,248,0.4)] transition-all duration-300 tracking-wide">Submit Application</motion.button>
                     </form>
                 </motion.div>
             </div>

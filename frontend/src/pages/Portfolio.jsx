@@ -54,7 +54,7 @@ const Portfolio = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Case Studies</h2>
-                    <h1 className="text-5xl md:text-6xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">
+                    <h1 className="text-3xl md:text-4xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">
                         Our Masterpieces
                     </h1>
 
@@ -103,7 +103,7 @@ const Portfolio = () => {
                                             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-sky-500 mb-2 block">
                                                 {project.category}
                                             </span>
-                                            <h3 className="text-2xl font-bold text-white group-hover:text-sky-400 transition-colors">
+                                            <h3 className="text-xl font-bold text-white group-hover:text-sky-400 transition-colors">
                                                 {project.title}
                                             </h3>
                                         </div>

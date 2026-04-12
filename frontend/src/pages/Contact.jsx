@@ -48,7 +48,7 @@ const Contact = () => {
                     className="text-center mb-24"
                 >
                     <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Connectivity</h2>
-                    <h1 className="text-6xl md:text-8xl font-black mb-8 leading-none tracking-tighter">
+                    <h1 className="text-4xl md:text-6xl font-black mb-8 leading-none tracking-tighter">
                         GET IN <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">TOUCH</span>
                     </h1>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light">
@@ -63,7 +63,7 @@ const Contact = () => {
                         className="space-y-12"
                     >
                         <div>
-                            <h3 className="text-4xl font-black text-white mb-6 uppercase tracking-tight">Contact Information</h3>
+                            <h3 className="text-2xl font-black text-white mb-6 uppercase tracking-tight">Contact Information</h3>
                             <p className="text-gray-400 text-lg leading-relaxed mb-10 max-w-md">
                                 Ready to transform your ideas into exceptional digital realities? Our team is standing by to architect your success.
                             </p>
@@ -115,7 +115,7 @@ const Contact = () => {
                     >
                         <div className="absolute top-0 right-0 w-32 h-32 bg-sky-600/10 blur-[80px] pointer-events-none"></div>
 
-                        <h3 className="text-3xl font-black text-white mb-10 tracking-tight">SEND MESSAGE</h3>
+                        <h3 className="text-2xl font-black text-white mb-10 tracking-tight">SEND MESSAGE</h3>
 
                         {status && (
                             <motion.div

@@ -34,7 +34,7 @@ const About = () => {
                     className="text-center mb-24"
                 >
                     <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Our Legacy</h2>
-                    <h1 className="text-6xl md:text-8xl font-black mb-8 leading-none">
+                    <h1 className="text-4xl md:text-6xl font-black mb-8 leading-none">
                         About <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">MESSIORA</span>
                     </h1>
                     <p className="text-2xl text-gray-400 max-w-4xl mx-auto font-light italic">
@@ -50,7 +50,7 @@ const About = () => {
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
-                        <h3 className="text-4xl font-black text-white leading-tight">Pioneering Digital Architectures Since Inception</h3>
+                        <h3 className="text-3xl font-black text-white leading-tight">Pioneering Digital Architectures Since Inception</h3>
                         <p className="text-gray-400 text-lg leading-relaxed">
                             MESSIORA was established with a singular, unyielding purpose: to bridge the gap between complex technological capabilities and elegant user experiences.
                         </p>
@@ -93,12 +93,12 @@ const About = () => {
                     >
                         {stats.map((stat, idx) => (
                             <div key={idx} className="bg-neutral-900 border border-neutral-800 p-8 rounded-3xl text-center shadow-2xl hover:border-sky-500/30 transition-all group">
-                                <div className="text-4xl font-black text-sky-500 mb-2 group-hover:scale-110 transition-transform">{stat.value}</div>
+                                <div className="text-3xl font-black text-sky-500 mb-2 group-hover:scale-110 transition-transform">{stat.value}</div>
                                 <div className="text-gray-500 text-sm font-bold uppercase tracking-widest">{stat.label}</div>
                             </div>
                         ))}
                         <div className="col-span-2 bg-gradient-to-br from-sky-600 to-blue-700 p-10 rounded-3xl text-center">
-                            <h4 className="text-3xl font-black text-white mb-2 italic">ZERO ERROR</h4>
+                            <h4 className="text-2xl font-black text-white mb-2 italic">ZERO ERROR</h4>
                             <p className="text-white/80 font-bold tracking-tight">THE ENGINEERING PHILOSOPHY</p>
                         </div>
                     </motion.div>
@@ -130,7 +130,7 @@ const About = () => {
                     whileInView={{ opacity: 1 }}
                     className="text-center max-w-5xl mx-auto p-16 bg-neutral-900 rounded-[50px] border border-neutral-800 shadow-[0_0_50px_rgba(0,0,0,0.5)]"
                 >
-                    <h3 className="text-4xl font-black mb-8 text-white">Technological Mastery</h3>
+                    <h3 className="text-3xl font-black mb-8 text-white">Technological Mastery</h3>
                     <p className="text-gray-400 text-xl mb-12 leading-relaxed max-w-3xl mx-auto font-light">
                         We leverage a military-grade tech stack centered around high-performance systems and fault-tolerant architectures.
                     </p>

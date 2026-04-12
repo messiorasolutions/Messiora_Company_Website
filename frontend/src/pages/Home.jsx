@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiCode, FiSmartphone, FiCpu, FiGlobe, FiDatabase, FiCloud } from 'react-icons/fi';
+import mainVideo from '../assets/main.mp4';
 
 const Home = () => {
     const fadeInUp = {
@@ -33,10 +34,10 @@ const Home = () => {
                         loop
                         muted
                         playsInline
-                        className="w-full h-full object-cover opacity-20"
+                        className="w-full h-full object-cover opacity-40"
                     >
                         {/* A stunning abstract technology video - opting for something blue-ish/dark */}
-                        <source src="https://videos.pexels.com/video-files/3129671/3129671-hd_1920_1080_30fps.mp4" type="video/mp4" />
+                        <source src={mainVideo} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                     {/* Gradient Overlay for better readability */}
@@ -45,7 +46,7 @@ const Home = () => {
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
-                        <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tight text-white drop-shadow-2xl">
+                        <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight text-white drop-shadow-2xl">
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">
                                 Engineering
                             </span> <br /> Your Digital Future
@@ -87,7 +88,7 @@ const Home = () => {
                         variants={fadeInUp}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-4xl md:text-5xl font-black text-white mb-4">What We Do</h2>
+                        <h2 className="text-3xl md:text-4xl font-black text-white mb-4">What We Do</h2>
                         <h3 className="text-xl text-sky-400 tracking-wide uppercase font-semibold">Premium Capabilities</h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-sky-500 to-blue-600 mx-auto mt-6 rounded-full"></div>
                     </motion.div>
@@ -109,7 +110,7 @@ const Home = () => {
                                 <div className="text-sky-500 mb-6 bg-neutral-900 w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-inner">
                                     {srv.icon}
                                 </div>
-                                <h4 className="text-2xl font-bold text-white mb-3 group-hover:text-sky-400 transition-colors">{srv.title}</h4>
+                                <h4 className="text-xl font-bold text-white mb-3 group-hover:text-sky-400 transition-colors">{srv.title}</h4>
                                 <p className="text-gray-400 mb-6 leading-relaxed">{srv.desc}</p>
                                 <Link to="/services" className="text-sky-500 hover:text-sky-400 font-semibold inline-flex items-center group/link">
                                     Learn More <FiArrowRight className="ml-2 group-hover/link:translate-x-1 transition-transform" />
@@ -151,18 +152,18 @@ const Home = () => {
                             className="flex-1"
                         >
                             <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Our Story</h2>
-                            <h3 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">Building The Future <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">With Precision</span></h3>
+                            <h3 className="text-3xl md:text-4xl font-black text-white mb-6 leading-tight">Building The Future <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">With Precision</span></h3>
                             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                                 Founded by industry veterans, MESSIORA crafts high-fidelity applications with zero compromise. We merge elegant design aesthetics with uncompromising engineering to deliver products that redefine markets.
                             </p>
 
                             <div className="grid grid-cols-2 gap-8 mb-10">
                                 <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800 border-l-4 border-l-sky-500">
-                                    <h4 className="text-4xl font-black text-white mb-1 drop-shadow-md">50+</h4>
+                                    <h4 className="text-3xl font-black text-white mb-1 drop-shadow-md">50+</h4>
                                     <span className="text-gray-400 text-sm font-medium uppercase tracking-wide">Projects Delivered</span>
                                 </div>
                                 <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800 border-l-4 border-l-blue-600">
-                                    <h4 className="text-4xl font-black text-white mb-1 drop-shadow-md">99%</h4>
+                                    <h4 className="text-3xl font-black text-white mb-1 drop-shadow-md">99%</h4>
                                     <span className="text-gray-400 text-sm font-medium uppercase tracking-wide">Client Satisfaction</span>
                                 </div>
                             </div>
