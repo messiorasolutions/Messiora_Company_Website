@@ -22,12 +22,9 @@ const Portfolio = () => {
 
         const setStaticProjects = () => {
             setProjects([
-                { _id: 1, title: 'Titan E-Commerce', category: 'Web Development', description: 'Next.js high performance storefront with real-time inventory and AI recommendations.', imageUrl: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80', projectUrl: '#' },
-                { _id: 2, title: 'Aegis Mobile', category: 'Mobile App Development', description: 'Cross platform fintech app featuring biometric security and instant global transfers.', imageUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80', projectUrl: '#' },
-                { _id: 3, title: 'Oracle Vision AI', category: 'AI Solutions', description: 'Advanced computer vision system for real-time manufacturing defect detection.', imageUrl: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=800&q=80', projectUrl: '#' },
-                { _id: 4, title: 'Nebula Cloud', category: 'Web Development', description: 'Distributed computing dashboard designed for massive multi-tenant orchestration.', imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80', projectUrl: '#' },
-                { _id: 5, title: 'Synth UX Kit', category: 'UI/UX Design', description: 'A complete design system for future-facing operating systems and interfaces.', imageUrl: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80', projectUrl: '#' },
-                { _id: 6, title: 'Quantum Neural', category: 'AI Solutions', description: 'Self-optimizing neural network architecture for high-frequency trading.', imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80', projectUrl: '#' }
+                { _id: 1, title: 'Restaurant POS System', category: 'Web Development', description: 'A modern Point of Sale system designed for restaurants, streamlining billing, order management, and payment processing through an intuitive interface. Features include real-time sales tracking, seamless kitchen communication, and automatic inventory updates. This solution enables faster service, reduces errors, improves stock control, and enhances the overall customer experience.', imageUrl: '/pos-system-image.png', projectUrl: '#' },
+                { _id: 2, title: 'Car Buy & Sell App', category: 'Mobile App Development', description: 'A modern car buy and sell mobile app that allows users to easily list, browse, and purchase vehicles. It includes advanced search filters, detailed vehicle listings with images and specifications, and direct chat between buyers and sellers. The app ensures a smooth, secure, and efficient marketplace experience for both parties.', imageUrl: '/car.png', projectUrl: '#' },
+                { _id: 3, title: 'QR-Based Smart Restaurant Website & Ordering System', category: 'Web Development', description: 'A smart restaurant website with an integrated QR-based ordering system that allows customers to scan a QR code using their phone to view the menu, place orders, and make payments seamlessly. It also provides real-time order updates, improving speed, convenience, and overall dining experience.', imageUrl: '/qr-restaurant.png', projectUrl: '#' }
             ]);
         };
 
@@ -138,3 +135,8 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
+/* Blog Card Example
+Title: The Future of AI in Enterprise
+Description: Explore how artificial intelligence is transforming traditional systems into intelligent, scalable, and automated enterprise solutions. Learn how AI improves efficiency, decision-making, and business growth.
+*/
