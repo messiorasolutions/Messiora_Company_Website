@@ -15,7 +15,7 @@ const Footer = () => {
                             Pioneering the next generation of digital infrastructure. We build software that doesn't just work—it redefines possibilities.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-gray-400 hover:bg-sky-500 hover:text-white transition-all" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/company/messiora" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-gray-400 hover:bg-sky-500 hover:text-white transition-all" aria-label="LinkedIn">
                                 <FiLinkedin size={20} />
                             </a>
                             <a href="https://github.com/messiorasolutions" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-gray-400 hover:bg-sky-500 hover:text-white transition-all" aria-label="GitHub">
@@ -73,8 +73,8 @@ const Footer = () => {
                 <div className="border-t border-neutral-900 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
                     <p className="mb-4 md:mb-0">&copy; {new Date().getFullYear()} MESSIORA GLOBAL. All rights reserved.</p>
                     <div className="flex space-x-6">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                        <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link to="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>
