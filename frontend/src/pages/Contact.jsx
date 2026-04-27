@@ -76,7 +76,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">HQ Location</h4>
-                                    <p className="text-base font-bold text-white">123 Innovation Drive, Silicon Plains</p>
+                                    <p className="text-base font-bold text-white">Colombo</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-5 group">
@@ -85,7 +85,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">Direct Line</h4>
-                                    <p className="text-base font-bold text-white">+1 (555) 123-4567</p>
+                                    <p className="text-base font-bold text-white">0778602219 / 0753471667</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-5 group">
@@ -94,7 +94,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">Signal Protocol</h4>
-                                    <p className="text-base font-bold text-white">hello@messiora.io</p>
+                                    <p className="text-base font-bold text-white">messiorasolutions@gmail.com</p>
                                 </div>
                             </div>
                         </div>

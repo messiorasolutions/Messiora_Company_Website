@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiMail, FiPhone, FiMapPin, FiTwitter, FiLinkedin, FiGithub } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub, FiFacebook, FiInstagram } from 'react-icons/fi';
 
 const Footer = () => {
     return (
@@ -15,14 +15,17 @@ const Footer = () => {
                             Pioneering the next generation of digital infrastructure. We build software that doesn't just work—it redefines possibilities.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-gray-400 hover:bg-sky-500 hover:text-white transition-all">
-                                <FiTwitter size={20} />
-                            </a>
-                            <a href="#" className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-gray-400 hover:bg-sky-500 hover:text-white transition-all">
+                            <a href="#" className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-gray-400 hover:bg-sky-500 hover:text-white transition-all" aria-label="LinkedIn">
                                 <FiLinkedin size={20} />
                             </a>
-                            <a href="#" className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-gray-400 hover:bg-sky-500 hover:text-white transition-all">
+                            <a href="https://github.com/messiorasolutions" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-gray-400 hover:bg-sky-500 hover:text-white transition-all" aria-label="GitHub">
                                 <FiGithub size={20} />
+                            </a>
+                            <a href="https://www.facebook.com/share/18qHe5whbs/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-gray-400 hover:bg-sky-500 hover:text-white transition-all" aria-label="Facebook">
+                                <FiFacebook size={20} />
+                            </a>
+                            <a href="https://www.instagram.com/messiorasolutions?igsh=ZThrNTQ2Y2J4ZTB4" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-gray-400 hover:bg-sky-500 hover:text-white transition-all" aria-label="Instagram">
+                                <FiInstagram size={20} />
                             </a>
                         </div>
                     </div>
@@ -41,7 +44,8 @@ const Footer = () => {
                         <h4 className="text-white font-bold text-lg mb-6 uppercase tracking-widest">Company</h4>
                         <ul className="space-y-4 text-gray-400">
                             <li><Link to="/about" className="hover:text-sky-400 transition-colors">About Story</Link></li>
-                            <li><Link to="/portfolio" className="hover:text-sky-400 transition-colors">Case Studies</Link></li>
+                            <li><Link to="/portfolio" className="hover:text-sky-400 transition-colors">Portfolio</Link></li>
+                            <li><Link to="/services" className="hover:text-sky-400 transition-colors">Services</Link></li>
                             <li><Link to="/blog" className="hover:text-sky-400 transition-colors">Tech Blog</Link></li>
                             <li><Link to="/jobs" className="hover:text-sky-400 transition-colors">Careers</Link></li>
                         </ul>
@@ -52,15 +56,15 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-center gap-3 text-gray-400">
                                 <FiMapPin className="text-sky-500 flex-shrink-0" />
-                                <span>123 Innovation Drive, Silicon Plains</span>
+                                <span>Colombo</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <FiPhone className="text-sky-500 flex-shrink-0" />
-                                <span>+1 (555) 123-4567</span>
+                                <span>0778602219 / 0753471667</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <FiMail className="text-sky-500 flex-shrink-0" />
-                                <span>hello@messiora.io</span>
+                                <span>messiorasolutions@gmail.com</span>
                             </li>
                         </ul>
                     </div>

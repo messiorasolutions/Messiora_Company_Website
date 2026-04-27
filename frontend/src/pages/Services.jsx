@@ -117,22 +117,6 @@ const Services = () => {
                                     </div>
                                 ))}
                             </div>
-
-                            <div className="flex flex-col sm:flex-row justify-between items-center bg-neutral-950 p-6 rounded-2xl border border-neutral-800/50">
-                                <div className="mb-4 sm:mb-0">
-                                    <span className="block text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">Price Point</span>
-                                    <span className="text-xl font-black text-white">{srv.price}</span>
-                                </div>
-                                <Link to="/contact" className="w-full sm:w-auto">
-                                    <motion.button
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className="w-full bg-gradient-to-r from-sky-400 to-blue-600 text-white font-black px-8 py-3 rounded-full text-sm shadow-[0_0_15px_rgba(56,189,248,0.2)]"
-                                    >
-                                        CHOOSE PLAN
-                                    </motion.button>
-                                </Link>
-                            </div>
                         </motion.div>
                     ))}
                 </motion.div>

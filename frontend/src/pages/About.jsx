@@ -144,7 +144,17 @@ const About = () => {
                         We leverage a military-grade tech stack centered around high-performance systems and fault-tolerant architectures.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6">
-                        {['REACT', 'NODE.JS', 'DOCKER', 'TERRAFORM', 'PYTHON', 'PYTORCH', 'GCP', 'REDIS'].map(tech => (
+                        {['REACT', 'NEXT.JS',
+                          'NODE.JS', 'EXPRESS',
+                          'MONGODB', 'MYSQL', 'POSTGRESQL',
+                          'DOCKER',
+                          'AWS',
+                          'FIREBASE',
+                          'GIT', 'GITHUB',
+                          'POSTMAN',
+                          'SELENIUM',
+                          'BOOTSTRAP', 'REST API', 'DEV TOOLS', 'DEVOPS'
+                        ].map(tech => (
                             <span key={tech} className="px-8 py-4 bg-neutral-950 text-sky-500 font-black text-sm border border-neutral-800 rounded-2xl hover:bg-sky-600 hover:text-white hover:border-sky-600 transition-all cursor-default shadow-lg">
                                 {tech}
                             </span>
