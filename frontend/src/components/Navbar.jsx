@@ -61,7 +61,7 @@ const Navbar = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-gradient-to-r from-sky-400 to-blue-600 text-white font-bold px-5 py-2 rounded-full text-xs shadow-[0_0_10px_rgba(56,189,248,0.2)]"
                             >
-                                GET QUOTE
+                                GET IN TOUCH
                             </motion.button>
                         </Link>
                     </div>
@@ -100,7 +100,7 @@ const Navbar = () => {
                             <div className="pt-4">
                                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                                     <button className="w-full bg-sky-500 text-white font-bold py-3.5 rounded-xl text-base">
-                                        GET QUOTE
+                                        GET IN TOUCH
                                     </button>
                                 </Link>
                             </div>

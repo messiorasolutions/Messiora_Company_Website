@@ -75,8 +75,8 @@ const Contact = () => {
                                     <FiMapPin size={22} />
                                 </div>
                                 <div>
-                                    <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">HQ Location</h4>
-                                    <p className="text-base font-bold text-white">123 Innovation Drive, Silicon Plains</p>
+                                    <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">Location</h4>
+                                    <p className="text-base font-bold text-white">Colombo</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-5 group">
@@ -84,8 +84,8 @@ const Contact = () => {
                                     <FiPhone size={22} />
                                 </div>
                                 <div>
-                                    <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">Direct Line</h4>
-                                    <p className="text-base font-bold text-white">+1 (555) 123-4567</p>
+                                    <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">Phone</h4>
+                                    <p className="text-base font-bold text-white">0778602219 / 0753471667</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-5 group">
@@ -93,8 +93,8 @@ const Contact = () => {
                                     <FiMail size={22} />
                                 </div>
                                 <div>
-                                    <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">Signal Protocol</h4>
-                                    <p className="text-base font-bold text-white">hello@messiora.io</p>
+                                    <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">email</h4>
+                                    <p className="text-base font-bold text-white">messiorasolutions@gmail.com</p>
                                 </div>
                             </div>
                         </div>
@@ -129,21 +129,21 @@ const Contact = () => {
 
                         <form onSubmit={handleSubmit} className="space-y-8">
                             <div className="space-y-2">
-                                <label className="text-[12px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">Identity</label>
+                                <label className="text-[12px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">Name</label>
                                 <input type="text" name="name" value={formData.name} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 text-sm rounded-xl focus:outline-none focus:border-sky-500 transition-colors shadow-inner" placeholder="Your Full Name" />
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[12px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">Email Endpoint</label>
+                                    <label className="text-[12px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">Email</label>
                                     <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 text-sm rounded-xl focus:outline-none focus:border-sky-500 transition-colors shadow-inner" placeholder="name@company.com" />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[12px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">Communication</label>
+                                    <label className="text-[12px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">Phone</label>
                                     <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 text-sm rounded-xl focus:outline-none focus:border-sky-500 transition-colors shadow-inner" placeholder="+1 (555) 000-0000" />
                                 </div>
                             </div>
                             <div className="space-y-2">
-                                <label className="text-[12px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">Briefing</label>
+                                <label className="text-[12px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">Message</label>
                                 <textarea name="message" value={formData.message} onChange={handleChange} required rows="4" className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 text-sm rounded-xl resize-none focus:outline-none focus:border-sky-500 transition-colors shadow-inner" placeholder="Project details, technical requirements, or vision..."></textarea>
                             </div>
 
@@ -153,7 +153,7 @@ const Contact = () => {
                                 type="submit"
                                 className="w-full bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black py-3.5 rounded-xl shadow-[0_10px_30px_rgba(56,189,248,0.3)] hover:shadow-[0_15px_40px_rgba(56,189,248,0.5)] transition-all flex items-center justify-center gap-2 text-sm tracking-[0.1em]"
                             >
-                                TRANSMIT <FiSend />
+                                SUBMIT <FiSend />
                             </motion.button>
                         </form>
                     </motion.div>
