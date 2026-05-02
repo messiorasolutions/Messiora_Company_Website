@@ -22,7 +22,7 @@ const Blog = () => {
         const setStaticPosts = () => {
             setPosts([
                 { _id: 1, title: 'The Future of AI in Enterprise', content: 'Explore how artificial intelligence is transforming traditional systems into intelligent, scalable, and automated enterprise solutions. Learn how AI improves efficiency, decision-making, and business growth.', category: 'AI', createdAt: new Date().toISOString() },
-                
+
             ]);
         };
 
@@ -40,7 +40,7 @@ const Blog = () => {
     };
 
     return (
-        <div className="pt-12 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+        <div className="pt-32 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
             {/* Background Glow */}
             <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-sky-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 

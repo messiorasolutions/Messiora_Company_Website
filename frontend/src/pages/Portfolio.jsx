@@ -27,17 +27,17 @@ const Portfolio = () => {
 
         const setStaticProjects = () => {
             setProjects([
-                { _id: 1, title: 'Edugate Global', category: 'Web Development', description: 'A comprehensive educational platform connecting students with global study opportunities. The system features advanced search functionalities, detailed institutional profiles, and a streamlined application process designed to empower international students.', imageUrl: edugateImg, projectUrl: 'https://edugateglobal.com' },
-                { _id: 2, title: 'Hub & Spoke Cafe', category: 'Web Development', description: 'A modern, visually appealing website for Hub & Spoke Cafe. The platform provides an elegant menu showcase, online reservations, and a seamless user experience that captures the cafe\'s unique ambiance while driving customer engagement.', imageUrl: hubnspokeImg, projectUrl: 'https://hubnspokecafe.com' },
-                { _id: 3, title: 'Coupang-KMART', status: 'ongoing', category: 'Web Development', description: 'Coupang-KMART is a comprehensive retail management platform developed for modern supermarkets. It provides scalable branch and product management, real-time inventory tracking, and sales analytics. With an intuitive interface for administrators and staff, it streamlines retail operations to improve efficiency and drive business growth.', imageUrl: kmartImg, projectUrl: '#' },
-                { _id: 4, title: 'Car Buy & Sell App', category: 'Mobile App Development', description: 'A modern car buy and sell mobile app that allows users to easily list, browse, and purchase vehicles. It includes advanced search filters, detailed vehicle listings with images and specifications, and direct chat between sellers and buyers. The app ensures a smooth, secure, and efficient marketplace experience for both parties.', imageUrl: easyautoImg, projectUrl: '#' }
+                { _id: 1, title: 'Edugate Global', category: 'Website & App Development', description: 'Educational platform connecting with global study opportunities.', imageUrl: edugateImg, projectUrl: 'https://edugateglobal.com' },
+                { _id: 2, title: 'Hub & Spoke Cafe', category: 'Website & App Development', description: 'Website for Hub & Spoke Cafe provides menu showcase, online reservations.', imageUrl: hubnspokeImg, projectUrl: 'https://hubnspokecafe.com' },
+                { _id: 3, title: 'Coupang-KMART', status: 'ongoing', category: 'Point of Sales (POS) Systems', description: 'Complete POS (Point of Sale) system for Coupang Lanka Korean Mart.', imageUrl: kmartImg, projectUrl: '#' },
+                { _id: 4, title: 'EASY AUTO Application', category: 'Website & App Development', description: 'Vehicle buy and sell mobile application for Easy Auto.', imageUrl: easyautoImg, projectUrl: '#' }
             ]);
         };
 
         fetchPortfolio();
     }, []);
 
-    const categories = ['All', 'Web Development', 'Mobile App Development', 'AI Solutions', 'UI/UX Design'];
+    const categories = ['All', 'Point of Sales (POS) Systems', 'Business Automation Tools', 'Website & App Development', 'Custom Software Solutions'];
     const filteredProjects = filter === 'All' ? projects : projects.filter(p => p.category === filter);
 
     const fadeInUp = {
@@ -46,7 +46,7 @@ const Portfolio = () => {
     };
 
     return (
-        <div className="pt-12 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+        <div className="pt-32 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-sky-600/5 rounded-full blur-[150px] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -56,10 +56,8 @@ const Portfolio = () => {
                     variants={fadeInUp}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Masterpieces</h2>
-                    <h1 className="text-4xl md:text-5xl font-black mb-8 leading-none text-white">
-                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">Portfolio</span>
-                    </h1>
+
+
 
                     <div className="flex flex-wrap justify-center gap-3 mt-10">
                         {categories.map(cat => (
