@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin, FiSend, FiCheckCircle } from 'react-icons/fi';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
@@ -76,7 +78,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">Location</h4>
-                                    <p className="text-base font-bold text-white">Colombo</p>
+                                    <p className="text-base font-bold text-white">2, kettarama temple road, maligawaththa, Colombo 10</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-5 group">
@@ -85,7 +87,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">Phone</h4>
-                                    <p className="text-base font-bold text-white">0778602219 / 0753471667</p>
+                                    <p className="text-base font-bold text-white">+82 10 4832 0845</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-5 group">
@@ -94,7 +96,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">email</h4>
-                                    <p className="text-base font-bold text-white">messiorasolutions@gmail.com</p>
+                                    <p className="text-base font-bold text-white">Hello@messiora.com</p>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +141,15 @@ const Contact = () => {
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-[12px] font-black text-gray-500 uppercase tracking-[0.2em] ml-1">Phone</label>
-                                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 text-sm rounded-xl focus:outline-none focus:border-sky-500 transition-colors shadow-inner" placeholder="+1 (555) 000-0000" />
+                                    <PhoneInput
+                                        country={'lk'}
+                                        value={formData.phone}
+                                        onChange={phone => setFormData({ ...formData, phone })}
+                                        inputProps={{ name: 'phone' }}
+                                        placeholder="+94 71 123 4567"
+                                        inputClass="w-full bg-neutral-950 border-none text-white px-5 py-3 text-sm rounded-xl focus:outline-none transition-colors shadow-inner"
+                                        buttonClass="bg-neutral-900 border border-neutral-800"
+                                    />
                                 </div>
                             </div>
                             <div className="space-y-2">

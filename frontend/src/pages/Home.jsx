@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiArrowRight, FiCode, FiSmartphone, FiCpu, FiGlobe, FiDatabase, FiCloud } from 'react-icons/fi';
+import { FiArrowRight, FiCode, FiSmartphone, FiCpu, FiGlobe, FiDatabase, FiCloud, FiCheckCircle, FiHeadphones } from 'react-icons/fi';
 import mainVideo from '../assets/main.mp4';
 import mainImage from '../assets/main.jpg';
 
@@ -19,10 +19,10 @@ const Home = () => {
     const services = [
         { icon: <FiCode size={36} />, title: 'Web Development', desc: 'Custom, high-performance web applications built for scale and unmatched user experience.' },
         { icon: <FiSmartphone size={36} />, title: 'Mobile Apps', desc: 'Native and cross-platform mobile experiences that engage and retain users natively.' },
-        { icon: <FiCpu size={36} />, title: 'AI Solutions', desc: 'Intelligent systems to automate workflows and optimize your business processes.' },
-        { icon: <FiGlobe size={36} />, title: 'Digital Transformation', desc: 'Modernizing legacy architectures for the dynamic, highly-connected world.' },
-        { icon: <FiDatabase size={36} />, title: 'Big Data', desc: 'Deriving actionable business intelligence from massive enterprise data pools.' },
-        { icon: <FiCloud size={36} />, title: 'Cloud Architecture', desc: 'Scalable, secure, and globally available cloud infrastructure design.' }
+        { icon: <FiCpu size={36} />, title: 'AI Solutions', desc: 'Intelligent automation systems tailored for startup workflows and growth optimization.' },
+        { icon: <FiGlobe size={36} />, title: 'MVP Development', desc: 'Rapid prototyping and scalable MVP builds to help you validate and launch fast.' },
+        { icon: <FiDatabase size={36} />, title: 'Data Analytics', desc: 'Deriving actionable insights and vital business intelligence from complex startup datasets.' },
+        { icon: <FiCloud size={36} />, title: 'Cloud Infrastructure', desc: 'Scalable, secure, and cost-effective cloud architectures designed for agile startups.' }
     ];
 
     return (
@@ -53,7 +53,7 @@ const Home = () => {
                             </span> <br /> Your Digital Future
                         </h1>
                         <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto mb-10 font-light">
-                            MESSIORA delivers premium IT solutions combining cutting-edge AI architecture, beautiful user interfaces, and robust systems to elevate your business globally.
+                            MESSIORA is an ambitious startup building premium IT solutions, combining cutting-edge AI architecture, beautiful user interfaces, and robust systems to accelerate your growth.
                         </p>
                         <div className="flex justify-center flex-wrap gap-6">
                             <Link to="/contact">
@@ -74,6 +74,7 @@ const Home = () => {
                                     View Our Work
                                 </motion.button>
                             </Link>
+
                         </div>
                     </motion.div>
                 </div>
@@ -155,20 +156,39 @@ const Home = () => {
                             <h2 className="text-[11px] font-black text-sky-500 tracking-[0.2em] uppercase mb-3">Our Story</h2>
                             <h3 className="text-2xl md:text-3xl font-black text-white mb-5 leading-tight uppercase">Building The Future <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">With Precision</span></h3>
                             <p className="text-gray-400 text-sm mb-7 leading-relaxed font-light max-w-lg">
-                                Founded by industry veterans, MESSIORA crafts high-fidelity applications with zero compromise. We merge elegant design aesthetics with uncompromising engineering to deliver products that redefine markets.
+                                As an ambitious startup team of passionate engineers, MESSIORA crafts high-fidelity applications with zero compromise. We merge elegant design aesthetics with uncompromising engineering to deliver products that redefine markets.
                             </p>
 
-                            <div className="grid grid-cols-2 gap-6 mb-8">
-                                <div className="bg-neutral-900/50 p-5 rounded-xl border border-neutral-800 border-l-4 border-l-sky-500 shadow-lg">
-                                    <h4 className="text-2xl font-black text-white mb-0.5">50+</h4>
-                                    <span className="text-gray-500 text-[11px] font-bold uppercase tracking-wider">Projects Delivered</span>
-                                </div>
-                                <div className="bg-neutral-900/50 p-5 rounded-xl border border-neutral-800 border-l-4 border-l-blue-600 shadow-lg">
-                                    <h4 className="text-2xl font-black text-white mb-0.5">99%</h4>
-                                    <span className="text-gray-500 text-[11px] font-bold uppercase tracking-wider">Client Satisfaction</span>
+                            <div className="mb-10 w-full max-w-sm rounded-[24px] bg-gradient-to-br from-cyan-500/20 to-blue-600/20 p-px relative group">
+                                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 opacity-0 group-hover:opacity-30 transition-opacity duration-700 blur"></div>
+
+                                <div className="relative bg-neutral-900 backdrop-blur-3xl p-7 rounded-[23px] border border-neutral-800/80">
+                                    <div className="flex items-center gap-5 mb-5">
+                                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+                                            <FiHeadphones className="text-white text-2xl" />
+                                        </div>
+                                        <div>
+                                            <h4 className="text-4xl font-black text-white leading-none">24<span className="text-cyan-400">/</span>7</h4>
+                                            <span className="text-gray-400 text-xs font-black uppercase tracking-[0.2em]">Expert Support</span>
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-3 mt-6 border-t border-neutral-800/60 pt-5">
+                                        <div className="flex items-center gap-3">
+                                            <FiCheckCircle className="text-cyan-400 text-base flex-shrink-0" />
+                                            <span className="text-gray-300 text-sm font-light">Agile engineering team coverage</span>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <FiCheckCircle className="text-cyan-400 text-base flex-shrink-0" />
+                                            <span className="text-gray-300 text-sm font-light">Proactive system monitoring</span>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <FiCheckCircle className="text-cyan-400 text-base flex-shrink-0" />
+                                            <span className="text-gray-300 text-sm font-light">Rapid incident response</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
                             <Link to="/about">
                                 <motion.button
                                     whileHover={{ x: 5 }}

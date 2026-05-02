@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiCode, FiSmartphone, FiCpu, FiLayout, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
+import { FiCode, FiSmartphone, FiCpu, FiLayout, FiGlobe, FiDatabase, FiCloud, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
 
 const Services = () => {
     const [services, setServices] = useState([]);
@@ -26,32 +26,46 @@ const Services = () => {
         const setStaticServices = () => {
             setServices([
                 {
-                    title: 'Fullstack Web Development',
+                    title: 'Web Development',
                     icon: <FiCode size={40} />,
-                    description: 'Enterprise-grade systems built with React, Node.js and distributed architectures. We focus on scalability, security and extreme performance.',
+                    description: 'Custom, high-performance web applications built for scale. We focus on rapid iteration, security, and extreme performance.',
                     price: 'Starts at $2,000',
-                    features: ['Progressive Web Apps', 'Real-time Dashboards', 'API Integration', 'Secure Auth Systems']
+                    features: ['Progressive Web Apps', 'Dynamic Dashboards', 'API Integration', 'Secure Auth']
                 },
                 {
-                    title: 'AI & Data Science',
-                    icon: <FiCpu size={40} />,
-                    description: 'Custom machine learning models designed to automate your core business logic and find patterns in massive data lakes.',
-                    price: 'Custom Quote',
-                    features: ['Computer Vision', 'NLP Processing', 'Predictive Analytics', 'Neural Networks']
-                },
-                {
-                    title: 'Mobile Applications',
+                    title: 'Mobile Apps',
                     icon: <FiSmartphone size={40} />,
-                    description: 'Native-feel iOS and Android applications developed using cutting-edge cross-platform technologies for maximum reach.',
+                    description: 'Native and cross-platform mobile experiences that engage. Developed using modern tech to launch fast and reliably.',
                     price: 'Starts at $3,500',
-                    features: ['React Native Expert', 'Biometric Security', 'Offline Capability', 'Smooth Animations']
+                    features: ['React Native Apps', 'Secure Storage', 'Offline Capability', 'Smooth Animations']
                 },
                 {
-                    title: 'UI/UX Premium Design',
-                    icon: <FiLayout size={40} />,
-                    description: 'Bespoke design systems and interfaces crafted for the high-end market. We build interactive proofs of concept.',
+                    title: 'AI Solutions',
+                    icon: <FiCpu size={40} />,
+                    description: 'Intelligent automation systems tailored for startup workflows, utilizing custom models to uncover insights and optimize growth.',
+                    price: 'Custom Quote',
+                    features: ['Smart Tooling', 'NLP Processing', 'Predictive Analytics', 'Automation Scripts']
+                },
+                {
+                    title: 'MVP Development',
+                    icon: <FiGlobe size={40} />,
+                    description: 'Rapid prototyping, bespoke design systems, and scalable MVP builds to help you validate and acquire early users fast.',
                     price: 'Starts at $1,500',
-                    features: ['Interactive Prototypes', 'Design Systems', 'Micro-interactions', 'Brand Identity']
+                    features: ['Interactive Prototypes', 'User Journeys', 'Wireframing', 'Brand Identity']
+                },
+                {
+                    title: 'Data Analytics',
+                    icon: <FiDatabase size={40} />,
+                    description: 'Deriving actionable insights and vital business intelligence from complex startup datasets to drive fast decision-making.',
+                    price: 'Custom Quote',
+                    features: ['Data Pipelines', 'Real-time Insights', 'KPI Dashboards', 'Custom Reports']
+                },
+                {
+                    title: 'Cloud Infrastructure',
+                    icon: <FiCloud size={40} />,
+                    description: 'Scalable, secure, and cost-effective cloud architectures designed to guarantee high availability for agile software startups.',
+                    price: 'Starts at $1,000',
+                    features: ['AWS / GCP Setup', 'Docker Containers', 'CI/CD Pipelines', 'Security Audits']
                 }
             ]);
         };
@@ -85,7 +99,7 @@ const Services = () => {
                         Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">Precision Services</span>
                     </h1>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                        We don't just write code; we architect solutions that drive revenue and redefine industry standards.
+                        We don't just write code; we architect innovative solutions that empower your growth.
                     </p>
                 </motion.div>
 
@@ -131,7 +145,7 @@ const Services = () => {
                         Our engineering team thrives on unique challenges. Tell us about your vision.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-4 text-2xl font-black text-sky-500 hover:text-blue-500 transition-colors group">
-                        Start Your Global Transformation <FiArrowRight className="group-hover:translate-x-3 transition-transform" />
+                        Start Your Digital Journey <FiArrowRight className="group-hover:translate-x-3 transition-transform" />
                     </Link>
                 </motion.div>
             </div>
