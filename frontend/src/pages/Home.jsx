@@ -17,12 +17,12 @@ const Home = () => {
     };
 
     const services = [
-        { icon: <FiCode size={36} />, title: 'Web Development', desc: 'Custom, high-performance web applications built for scale and unmatched user experience.' },
-        { icon: <FiSmartphone size={36} />, title: 'Mobile Apps', desc: 'Native and cross-platform mobile experiences that engage and retain users natively.' },
-        { icon: <FiCpu size={36} />, title: 'AI Solutions', desc: 'Intelligent automation systems tailored for startup workflows and growth optimization.' },
-        { icon: <FiGlobe size={36} />, title: 'MVP Development', desc: 'Rapid prototyping and scalable MVP builds to help you validate and launch fast.' },
-        { icon: <FiDatabase size={36} />, title: 'Data Analytics', desc: 'Deriving actionable insights and vital business intelligence from complex startup datasets.' },
-        { icon: <FiCloud size={36} />, title: 'Cloud Infrastructure', desc: 'Scalable, secure, and cost-effective cloud architectures designed for agile startups.' }
+        { icon: <FiCode size={36} />, title: 'Web Development', desc: 'Build fast and modern websites and web apps that work smoothly and can grow with your business.' },
+        { icon: <FiDatabase size={36} />, title: 'Point of Sales (POS) Systems', desc: 'Build easy-to-use POS systems for stores and shops to manage sales and stock faster.' },
+        { icon: <FiSmartphone size={36} />, title: 'Mobile Apps', desc: 'Create mobile apps for Android and iOS that are easy to use and help you connect with your users.' },
+        { icon: <FiGlobe size={36} />, title: 'MVP Development', desc: 'Quickly build simple versions of your product so you can test your idea and launch faster.' },
+        { icon: <FiCpu size={36} />, title: 'Business Automation Tools', desc: 'Create tools that automate repetitive jobs to save you time and make your business more efficient.' },
+        { icon: <FiCloud size={36} />, title: 'Custom Software Solutions', desc: 'Develop special software made exactly for your business needs to solve specific problems.' }
     ];
 
     return (
@@ -53,7 +53,7 @@ const Home = () => {
                             </span> <br /> Your Digital Future
                         </h1>
                         <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto mb-10 font-light">
-                            MESSIORA is an ambitious startup building premium IT solutions, combining cutting-edge AI architecture, beautiful user interfaces, and robust systems to accelerate your growth.
+                            MESSIORA is that builds high-quality IT solutions. We use modern Technologies, clean and beautiful designs, and strong systems to help grow your business faster.
                         </p>
                         <div className="flex justify-center flex-wrap gap-6">
                             <Link to="/contact">
@@ -91,7 +91,6 @@ const Home = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-black text-white mb-4">What We Do</h2>
-                        <h3 className="text-xl text-sky-400 tracking-wide uppercase font-semibold">Premium Capabilities</h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-sky-500 to-blue-600 mx-auto mt-6 rounded-full"></div>
                     </motion.div>
 
@@ -153,10 +152,10 @@ const Home = () => {
                             transition={{ duration: 0.8 }}
                             className="flex-1"
                         >
-                            <h2 className="text-[11px] font-black text-sky-500 tracking-[0.2em] uppercase mb-3">Our Story</h2>
-                            <h3 className="text-2xl md:text-3xl font-black text-white mb-5 leading-tight uppercase">Building The Future <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">With Precision</span></h3>
+
+                            <h3 className="text-2xl md:text-3xl font-black text-white mb-5 leading-tight uppercase">Building The Future <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">With Accuracy and Care</span></h3>
                             <p className="text-gray-400 text-sm mb-7 leading-relaxed font-light max-w-lg">
-                                As an ambitious startup team of passionate engineers, MESSIORA crafts high-fidelity applications with zero compromise. We merge elegant design aesthetics with uncompromising engineering to deliver products that redefine markets.
+                                We are a team of engineers building MESSIORA. We create applications with strong focus on design and performance. Our goal is to build products that help improve and transform markets.
                             </p>
 
                             <div className="mb-10 w-full max-w-sm rounded-[24px] bg-gradient-to-br from-cyan-500/20 to-blue-600/20 p-px relative group">
@@ -169,22 +168,22 @@ const Home = () => {
                                         </div>
                                         <div>
                                             <h4 className="text-4xl font-black text-white leading-none">24<span className="text-cyan-400">/</span>7</h4>
-                                            <span className="text-gray-400 text-xs font-black uppercase tracking-[0.2em]">Expert Support</span>
+                                            <span className="text-gray-400 text-xs font-black uppercase tracking-[0.2em]">Support</span>
                                         </div>
                                     </div>
 
                                     <div className="space-y-3 mt-6 border-t border-neutral-800/60 pt-5">
                                         <div className="flex items-center gap-3">
                                             <FiCheckCircle className="text-cyan-400 text-base flex-shrink-0" />
-                                            <span className="text-gray-300 text-sm font-light">Agile engineering team coverage</span>
+                                            <span className="text-gray-300 text-sm font-light">Engineering Team</span>
                                         </div>
                                         <div className="flex items-center gap-3">
                                             <FiCheckCircle className="text-cyan-400 text-base flex-shrink-0" />
-                                            <span className="text-gray-300 text-sm font-light">Proactive system monitoring</span>
+                                            <span className="text-gray-300 text-sm font-light">System Monitoring</span>
                                         </div>
                                         <div className="flex items-center gap-3">
                                             <FiCheckCircle className="text-cyan-400 text-base flex-shrink-0" />
-                                            <span className="text-gray-300 text-sm font-light">Rapid incident response</span>
+                                            <span className="text-gray-300 text-sm font-light">Fast Support & Fixes</span>
                                         </div>
                                     </div>
                                 </div>

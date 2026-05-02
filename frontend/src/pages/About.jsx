@@ -5,16 +5,16 @@ import t1 from '../assets/t1.jpeg';
 
 const About = () => {
     const coreValues = [
-        { icon: <FiTarget size={36} />, title: 'Mission', desc: 'To provide unparalleled digital infrastructure and software architecture that accelerates organizational growth.' },
-        { icon: <FiEye size={36} />, title: 'Vision', desc: 'To be the global benchmark for digital excellence, where innovation meets uncompromising reliability.' },
-        { icon: <FiUsers size={36} />, title: 'Culture', desc: 'A collective of deeply passionate engineers and designers functioning as a unified force for change.' }
+        { icon: <FiTarget size={36} />, title: 'Mission', desc: 'To build strong digital systems and software that help businesses grow faster.' },
+        { icon: <FiEye size={36} />, title: 'Vision', desc: 'To become a leader in digital innovation and reliable technology.' },
+        { icon: <FiUsers size={36} />, title: 'Culture', desc: 'A team of engineers and designers working together to create positive change.' }
     ];
 
     const qualifications = [
-        { icon: <FiAward />, text: <span>BSc. (Hons.) Computer Science specialized in Software Engineering, UK, <span className="text-white font-black">First Class</span></span> },
-        { icon: <FiTrendingUp />, text: <span>PGD in Cybersecurity, Singapore, <span className="text-white font-black">Batch top</span></span> },
-        { icon: <FiBookOpen />, text: <span>MSc in Software, Kyungpook national University, South Korea <span className="text-sky-400 font-bold">(ongoing)</span></span> },
-        { icon: <FiCpu />, text: 'R&D in Software + Forest Engineering, South Korea' }
+        { icon: <FiAward />, text: 'BSc. (Hons.) Computer Science specialized in Software Engineering, UK, First Class' },
+        { icon: <FiAward />, text: 'PGD in Cybersecurity, Singapore, Batch top' },
+        { icon: <FiAward />, text: <span>MSc in Software, Kyungpook national University, South Korea <span className="text-sky-400 font-bold">(ongoing)</span></span> },
+        { icon: <FiAward />, text: 'R&D in Software + Forest Engineering, South Korea' }
     ];
 
     const fadeInUp = {
@@ -23,7 +23,7 @@ const About = () => {
     };
 
     return (
-        <div className="pt-12 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+        <div className="pt-32 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-full h-[600px] bg-gradient-to-b from-sky-600/10 to-transparent pointer-events-none"></div>
 
@@ -34,12 +34,10 @@ const About = () => {
                     variants={fadeInUp}
                     className="text-center mb-24"
                 >
-                    <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Our Legacy</h2>
-                    <h1 className="text-4xl md:text-5xl font-black mb-8 leading-none">
-                        About <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">MESSIORA</span>
-                    </h1>
+
+
                     <p className="text-2xl text-gray-400 max-w-4xl mx-auto font-light italic">
-                        "Engineering perfection is not when there is nothing more to add, but when there is nothing left to take away."
+                        "Perfect engineering means not adding more, but removing everything unnecessary until only the best remains."
                     </p>
                 </motion.div>
 
@@ -63,34 +61,7 @@ const About = () => {
                     ))}
                 </div>
 
-                {/* Tech Stack */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    className="text-center max-w-5xl mx-auto p-16 bg-neutral-900 rounded-[50px] border border-neutral-800 shadow-[0_0_50px_rgba(0,0,0,0.5)] mb-32"
-                >
-                    <h3 className="text-3xl font-black mb-8 text-white">Technological Mastery</h3>
-                    <p className="text-gray-400 text-xl mb-12 leading-relaxed max-w-3xl mx-auto font-light">
-                        We leverage a military-grade tech stack centered around high-performance systems and fault-tolerant architectures.
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-6">
-                        {['REACT', 'NEXT.JS',
-                            'NODE.JS', 'EXPRESS',
-                            'MONGODB', 'MYSQL', 'POSTGRESQL',
-                            'DOCKER',
-                            'AWS',
-                            'FIREBASE',
-                            'GIT', 'GITHUB',
-                            'POSTMAN',
-                            'SELENIUM',
-                            'BOOTSTRAP', 'REST API', 'DEV TOOLS', 'DEVOPS'
-                        ].map(tech => (
-                            <span key={tech} className="px-8 py-4 bg-neutral-950 text-sky-500 font-black text-sm border border-neutral-800 rounded-2xl hover:bg-sky-600 hover:text-white hover:border-sky-600 transition-all cursor-default shadow-lg">
-                                {tech}
-                            </span>
-                        ))}
-                    </div>
-                </motion.div>
+
 
                 {/* Engineering Leadership */}
                 <div className="space-y-12">
@@ -100,9 +71,7 @@ const About = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Visionary Leadership</h2>
-                        <h3 className="text-4xl font-black text-white tracking-tighter">
-                            THE <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">ARCHITECT</span> OF INNOVATION
-                        </h3>
+
                     </motion.div>
 
                     <motion.div

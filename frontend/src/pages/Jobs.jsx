@@ -58,7 +58,7 @@ const Jobs = () => {
     };
 
     return (
-        <div className="pt-12 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+        <div className="pt-32 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
             <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -68,12 +68,12 @@ const Jobs = () => {
                     variants={fadeInUp}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Careers</h2>
+
                     <h1 className="text-4xl md:text-5xl font-black mb-6 leading-none text-white">
                         Join <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">Our Team</span>
                     </h1>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light">
-                        Build the future. Challenge the status quo. Leave a dent in the universe with MESSIORA.
+                        Build the future - Join with MESSIORA.
                     </p>
                 </motion.div>
 
@@ -99,27 +99,27 @@ const Jobs = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="space-y-2">
                                 <label className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
-                                    <FiBriefcase className="text-sky-500" /> Position
+                                    <FiBriefcase className="text-sky-500" /> Request Position
                                 </label>
-                                <input type="text" name="jobTitle" value={formData.jobTitle} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner text-sm" placeholder="E.g., Senior AI Engineer" />
+                                <input type="text" name="jobTitle" value={formData.jobTitle} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner text-sm" placeholder="E.g., Intern Software Engineer" />
                             </div>
                             <div className="space-y-2">
                                 <label className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
                                     <FiUser className="text-sky-500" /> Full Name
                                 </label>
-                                <input type="text" name="applicantName" value={formData.applicantName} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner text-sm" placeholder="Jane Doe" />
+                                <input type="text" name="applicantName" value={formData.applicantName} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner text-sm" placeholder="Your Name" />
                             </div>
                             <div className="space-y-2">
                                 <label className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
                                     <FiMail className="text-sky-500" /> Email
                                 </label>
-                                <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner text-sm" placeholder="jane@example.com" />
+                                <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner text-sm" placeholder="Email Address" />
                             </div>
                             <div className="space-y-2">
                                 <label className="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
                                     <FiPhone className="text-sky-500" /> Phone
                                 </label>
-                                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner text-sm" placeholder="+1 (555) 000-0000" />
+                                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full bg-neutral-950 border border-neutral-800 text-white px-5 py-3 rounded-xl focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-inner text-sm" placeholder="Mobile Number" />
                             </div>
                         </div>
 

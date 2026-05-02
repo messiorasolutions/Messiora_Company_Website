@@ -41,7 +41,7 @@ const Contact = () => {
     const PhoneInputComponent = PhoneInput.default || PhoneInput;
 
     return (
-        <div className="pt-12 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+        <div className="pt-32 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
             <style>
                 {`
                     .react-tel-input .country-list {
@@ -72,12 +72,12 @@ const Contact = () => {
                     variants={fadeInUp}
                     className="text-center mb-24"
                 >
-                    <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Connectivity</h2>
+
                     <h1 className="text-4xl md:text-5xl font-black mb-8 leading-none tracking-tighter">
                         GET IN <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">TOUCH</span>
                     </h1>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light">
-                        Collaborate with the engineers building tomorrow. Let's start the dialogue.
+                        Collaborate with the Us.
                     </p>
                 </motion.div>
 
@@ -90,7 +90,7 @@ const Contact = () => {
                         <div>
                             <h3 className="text-xl font-black text-white mb-4 uppercase tracking-tight">Contact Information</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-sm font-light">
-                                Ready to transform your ideas into exceptional digital realities? Our team is standing by to architect your success.
+                                Our team is here to help you
                             </p>
                         </div>
 
@@ -101,7 +101,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">Location</h4>
-                                    <p className="text-base font-bold text-white">2, kettarama temple road, maligawaththa, Colombo 10</p>
+                                    <p className="text-base font-bold text-white">No 2, kettarama temple road, maligawaththa, Colombo 10</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-5 group">
@@ -110,7 +110,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">Phone</h4>
-                                    <p className="text-base font-bold text-white">+82 10 4832 0845</p>
+                                    <p className="text-base font-bold text-white">+82 10 4832 0845 <br /> +94 77 860 2219</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-5 group">
@@ -125,7 +125,7 @@ const Contact = () => {
                         </div>
 
                         <div className="pt-10">
-                            <h4 className="text-sm font-bold text-white uppercase tracking-widest mb-6 border-b border-neutral-800 pb-4 inline-block">Global Availability</h4>
+                            <h4 className="text-sm font-bold text-white uppercase tracking-widest mb-6 border-b border-neutral-800 pb-4 inline-block">Availability</h4>
                             <div className="flex items-center gap-3 text-sky-500 font-black text-xl">
                                 <FiCheckCircle />
                                 <span>24 / 7 DAYS</span>

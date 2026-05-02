@@ -12,7 +12,7 @@ const Footer = () => {
                             MESSI<span className="text-sky-400 group-hover:text-sky-300 transition-colors">ORA</span>
                         </Link>
                         <p className="text-gray-400 text-base leading-relaxed">
-                            Pioneering the next generation of digital infrastructure. We build software that doesn't just work—it redefines possibilities.
+                            We are building the next generation of digital systems. Software is not only functional, but also helps create new possibilities and better ways of working.
                         </p>
                         <div className="flex space-x-4">
                             <a href="https://www.linkedin.com/company/messiora" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-gray-400 hover:bg-sky-500 hover:text-white transition-all" aria-label="LinkedIn">
@@ -55,11 +55,11 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-center gap-3 text-gray-400">
                                 <FiMapPin className="text-sky-500 flex-shrink-0" />
-                                <span>2, kettarama temple road, maligawaththa, Colombo 10</span>
+                                <span>No 2, kettarama temple road, maligawaththa, Colombo 10</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <FiPhone className="text-sky-500 flex-shrink-0" />
-                                <span>+82 10 4832 0845</span>
+                                <span>+82 10 4832 0845 , +94 77 860 2219</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <FiMail className="text-sky-500 flex-shrink-0" />
