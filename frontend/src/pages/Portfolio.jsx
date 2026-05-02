@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiExternalLink, FiLayers } from 'react-icons/fi';
 
+import edugateImg from '../assets/edugateglobal.png';
+import hubnspokeImg from '../assets/hubnspoke.jpg';
+import kmartImg from '../assets/kmart.jpg';
+import easyautoImg from '../assets/easyauto.png';
+
 const Portfolio = () => {
     const [projects, setProjects] = useState([]);
     const [filter, setFilter] = useState('All');
@@ -22,9 +27,10 @@ const Portfolio = () => {
 
         const setStaticProjects = () => {
             setProjects([
-                { _id: 1, title: 'Restaurant POS System', category: 'Web Development', description: 'A modern Point of Sale system designed for restaurants, streamlining billing, order management, and payment processing through an intuitive interface. Features include real-time sales tracking, seamless kitchen communication, and automatic inventory updates. This solution enables faster service, reduces errors, improves stock control, and enhances the overall customer experience.', imageUrl: '/pos-system-image.png', projectUrl: '#' },
-                { _id: 2, title: 'Car Buy & Sell App', category: 'Mobile App Development', description: 'A modern car buy and sell mobile app that allows users to easily list, browse, and purchase vehicles. It includes advanced search filters, detailed vehicle listings with images and specifications, and direct chat between buyers and sellers. The app ensures a smooth, secure, and efficient marketplace experience for both parties.', imageUrl: '/car.png', projectUrl: '#' },
-                { _id: 3, title: 'QR-Based Smart Restaurant Website & Ordering System', category: 'Web Development', description: 'A smart restaurant website with an integrated QR-based ordering system that allows customers to scan a QR code using their phone to view the menu, place orders, and make payments seamlessly. It also provides real-time order updates, improving speed, convenience, and overall dining experience.', imageUrl: '/qr-restaurant.png', projectUrl: '#' }
+                { _id: 1, title: 'Edugate Global', category: 'Web Development', description: 'A comprehensive educational platform connecting students with global study opportunities. The system features advanced search functionalities, detailed institutional profiles, and a streamlined application process designed to empower international students.', imageUrl: edugateImg, projectUrl: 'https://edugateglobal.com' },
+                { _id: 2, title: 'Hub & Spoke Cafe', category: 'Web Development', description: 'A modern, visually appealing website for Hub & Spoke Cafe. The platform provides an elegant menu showcase, online reservations, and a seamless user experience that captures the cafe\'s unique ambiance while driving customer engagement.', imageUrl: hubnspokeImg, projectUrl: 'https://hubnspokecafe.com' },
+                { _id: 3, title: 'Coupang-KMART', status: 'ongoing', category: 'Web Development', description: 'Coupang-KMART is a comprehensive retail management platform developed for modern supermarkets. It provides scalable branch and product management, real-time inventory tracking, and sales analytics. With an intuitive interface for administrators and staff, it streamlines retail operations to improve efficiency and drive business growth.', imageUrl: kmartImg, projectUrl: '#' },
+                { _id: 4, title: 'Car Buy & Sell App', category: 'Mobile App Development', description: 'A modern car buy and sell mobile app that allows users to easily list, browse, and purchase vehicles. It includes advanced search filters, detailed vehicle listings with images and specifications, and direct chat between sellers and buyers. The app ensures a smooth, secure, and efficient marketplace experience for both parties.', imageUrl: easyautoImg, projectUrl: '#' }
             ]);
         };
 
@@ -85,11 +91,11 @@ const Portfolio = () => {
                                 transition={{ duration: 0.4 }}
                                 className="group relative bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden hover:border-sky-500/50 transition-colors"
                             >
-                                <div className="h-64 overflow-hidden relative">
+                                <div className="h-64 overflow-hidden relative bg-neutral-950 flex items-center justify-center p-2">
                                     <img
                                         src={project.imageUrl}
                                         alt={project.title}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                        className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 rounded-lg"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-60"></div>
                                 </div>
@@ -100,8 +106,14 @@ const Portfolio = () => {
                                             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-sky-500 mb-2 block">
                                                 {project.category}
                                             </span>
-                                            <h3 className="text-xl font-bold text-white group-hover:text-sky-400 transition-colors">
+                                            <h3 className="text-xl font-bold text-white group-hover:text-sky-400 transition-colors flex items-center gap-3">
                                                 {project.title}
+                                                {project.status === 'ongoing' && (
+                                                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-[9px] uppercase tracking-widest font-bold">
+                                                        <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
+                                                        In Progress
+                                                    </span>
+                                                )}
                                             </h3>
                                         </div>
                                         {project.projectUrl && (

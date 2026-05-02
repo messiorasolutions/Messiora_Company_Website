@@ -46,7 +46,6 @@ const Footer = () => {
                             <li><Link to="/about" className="hover:text-sky-400 transition-colors">About Story</Link></li>
                             <li><Link to="/portfolio" className="hover:text-sky-400 transition-colors">Portfolio</Link></li>
                             <li><Link to="/services" className="hover:text-sky-400 transition-colors">Services</Link></li>
-                            <li><Link to="/blog" className="hover:text-sky-400 transition-colors">Tech Blog</Link></li>
                             <li><Link to="/jobs" className="hover:text-sky-400 transition-colors">Careers</Link></li>
                         </ul>
                     </div>
@@ -56,15 +55,15 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-center gap-3 text-gray-400">
                                 <FiMapPin className="text-sky-500 flex-shrink-0" />
-                                <span>Colombo</span>
+                                <span>2, kettarama temple road, maligawaththa, Colombo 10</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <FiPhone className="text-sky-500 flex-shrink-0" />
-                                <span>0778602219 / 0753471667</span>
+                                <span>+82 10 4832 0845</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <FiMail className="text-sky-500 flex-shrink-0" />
-                                <span>messiorasolutions@gmail.com</span>
+                                <span>Hello@messiora.com</span>
                             </li>
                         </ul>
                     </div>
