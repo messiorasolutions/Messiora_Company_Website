@@ -101,7 +101,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">Location</h4>
-                                    <p className="text-base font-bold text-white">No 2, kettarama temple road, maligawaththa, Colombo 10</p>
+                                    <p className="text-base font-bold text-white">558 High Level Rd, Pannipitiya, Sri Lanka</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-5 group">
@@ -119,7 +119,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">email</h4>
-                                    <p className="text-base font-bold text-white">Hello@messiora.com</p>
+                                    <p className="text-base font-bold text-white">messiorasolutions@gmail.com</p>
                                 </div>
                             </div>
                         </div>
