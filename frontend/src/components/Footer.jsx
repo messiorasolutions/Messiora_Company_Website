@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub, FiFacebook, FiInstagram } from 'react-icons/fi';
+import { FaTiktok } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -26,6 +27,9 @@ const Footer = () => {
                             </a>
                             <a href="https://www.instagram.com/messiorasolutions?igsh=ZThrNTQ2Y2J4ZTB4" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-gray-400 hover:bg-sky-500 hover:text-white transition-all" aria-label="Instagram">
                                 <FiInstagram size={20} />
+                            </a>
+                            <a href="https://www.tiktok.com/@messiora.solution?_r=1&_t=ZS-99MftO5DpKy" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center text-gray-400 hover:bg-sky-500 hover:text-white transition-all" aria-label="TikTok">
+                                <FaTiktok size={20} />
                             </a>
                         </div>
                     </div>
@@ -55,7 +59,7 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-center gap-3 text-gray-400">
                                 <FiMapPin className="text-sky-500 flex-shrink-0" />
-                                <span>No 2, kettarama temple road, maligawaththa, Colombo 10</span>
+                                <span>558 High Level Rd, Pannipitiya, Sri Lanka</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <FiPhone className="text-sky-500 flex-shrink-0" />
@@ -63,7 +67,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <FiMail className="text-sky-500 flex-shrink-0" />
-                                <span>Hello@messiora.com</span>
+                                <span>messiorasolutions@gmail.com</span>
                             </li>
                         </ul>
                     </div>
