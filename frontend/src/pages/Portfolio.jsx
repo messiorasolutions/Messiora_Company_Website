@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiExternalLink, FiLayers } from 'react-icons/fi';
 
+import edugateImg from '../assets/edugateglobal.png';
+import hubnspokeImg from '../assets/hubnspoke.jpg';
+import kmartImg from '../assets/kmart.jpg';
+import easyautoImg from '../assets/easyauto.png';
+
 const Portfolio = () => {
     const [projects, setProjects] = useState([]);
     const [filter, setFilter] = useState('All');
@@ -22,19 +27,17 @@ const Portfolio = () => {
 
         const setStaticProjects = () => {
             setProjects([
-                { _id: 1, title: 'Titan E-Commerce', category: 'Web Development', description: 'Next.js high performance storefront with real-time inventory and AI recommendations.', imageUrl: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80', projectUrl: '#' },
-                { _id: 2, title: 'Aegis Mobile', category: 'Mobile App Development', description: 'Cross platform fintech app featuring biometric security and instant global transfers.', imageUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80', projectUrl: '#' },
-                { _id: 3, title: 'Oracle Vision AI', category: 'AI Solutions', description: 'Advanced computer vision system for real-time manufacturing defect detection.', imageUrl: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=800&q=80', projectUrl: '#' },
-                { _id: 4, title: 'Nebula Cloud', category: 'Web Development', description: 'Distributed computing dashboard designed for massive multi-tenant orchestration.', imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80', projectUrl: '#' },
-                { _id: 5, title: 'Synth UX Kit', category: 'UI/UX Design', description: 'A complete design system for future-facing operating systems and interfaces.', imageUrl: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80', projectUrl: '#' },
-                { _id: 6, title: 'Quantum Neural', category: 'AI Solutions', description: 'Self-optimizing neural network architecture for high-frequency trading.', imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80', projectUrl: '#' }
+                { _id: 1, title: 'Edugate Global', category: 'Website & App Development', description: 'Educational platform connecting with global study opportunities.', imageUrl: edugateImg, projectUrl: 'https://edugateglobal.com' },
+                { _id: 2, title: 'Hub & Spoke Cafe', category: 'Website & App Development', description: 'Website for Hub & Spoke Cafe provides menu showcase, online reservations.', imageUrl: hubnspokeImg, projectUrl: 'https://hubnspokecafe.com' },
+                { _id: 3, title: 'Coupang-KMART', status: 'ongoing', category: 'Point of Sales (POS) Systems', description: 'Complete Web and POS (Point of Sale) system for Coupang Lanka Korean Mart.', imageUrl: kmartImg, projectUrl: 'https://coupanglanka.com/' },
+                { _id: 4, title: 'EASY AUTO Application', category: 'Website & App Development', description: 'Vehicle buy and sell mobile application for Easy Auto.', imageUrl: easyautoImg, projectUrl: '#' }
             ]);
         };
 
         fetchPortfolio();
     }, []);
 
-    const categories = ['All', 'Web Development', 'Mobile App Development', 'AI Solutions', 'UI/UX Design'];
+    const categories = ['All', 'Point of Sales (POS) Systems', 'Business Automation Tools', 'Website & App Development', 'Custom Software Solutions'];
     const filteredProjects = filter === 'All' ? projects : projects.filter(p => p.category === filter);
 
     const fadeInUp = {
@@ -43,7 +46,7 @@ const Portfolio = () => {
     };
 
     return (
-        <div className="pt-12 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+        <div className="pt-32 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-sky-600/5 rounded-full blur-[150px] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -53,10 +56,8 @@ const Portfolio = () => {
                     variants={fadeInUp}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-sm font-bold text-sky-500 tracking-[0.2em] uppercase mb-4">Masterpieces</h2>
-                    <h1 className="text-4xl md:text-5xl font-black mb-8 leading-none text-white">
-                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">Portfolio</span>
-                    </h1>
+
+
 
                     <div className="flex flex-wrap justify-center gap-3 mt-10">
                         {categories.map(cat => (
@@ -88,11 +89,11 @@ const Portfolio = () => {
                                 transition={{ duration: 0.4 }}
                                 className="group relative bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden hover:border-sky-500/50 transition-colors"
                             >
-                                <div className="h-64 overflow-hidden relative">
+                                <div className="h-64 overflow-hidden relative bg-neutral-950 flex items-center justify-center p-2">
                                     <img
                                         src={project.imageUrl}
                                         alt={project.title}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                        className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 rounded-lg"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-60"></div>
                                 </div>
@@ -103,8 +104,14 @@ const Portfolio = () => {
                                             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-sky-500 mb-2 block">
                                                 {project.category}
                                             </span>
-                                            <h3 className="text-xl font-bold text-white group-hover:text-sky-400 transition-colors">
+                                            <h3 className="text-xl font-bold text-white group-hover:text-sky-400 transition-colors flex items-center gap-3">
                                                 {project.title}
+                                                {project.status === 'ongoing' && (
+                                                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-[9px] uppercase tracking-widest font-bold">
+                                                        <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
+                                                        In Progress
+                                                    </span>
+                                                )}
                                             </h3>
                                         </div>
                                         {project.projectUrl && (
@@ -138,3 +145,8 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
+/* Blog Card Example
+Title: The Future of AI in Enterprise
+Description: Explore how artificial intelligence is transforming traditional systems into intelligent, scalable, and automated enterprise solutions. Learn how AI improves efficiency, decision-making, and business growth.
+*/

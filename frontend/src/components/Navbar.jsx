@@ -21,13 +21,12 @@ const Navbar = () => {
         { name: 'About', path: '/about' },
         { name: 'Services', path: '/services' },
         { name: 'Portfolio', path: '/portfolio' },
-        { name: 'Blog', path: '/blog' },
         { name: 'Careers', path: '/jobs' },
         { name: 'Contact', path: '/contact' },
     ];
 
     return (
-        <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800 py-3' : 'bg-transparent py-5'}`}>
+        <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800 py-3' : 'bg-black/10 backdrop-blur-[2px] py-5'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center">
@@ -61,7 +60,7 @@ const Navbar = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-gradient-to-r from-sky-400 to-blue-600 text-white font-bold px-5 py-2 rounded-full text-xs shadow-[0_0_10px_rgba(56,189,248,0.2)]"
                             >
-                                GET QUOTE
+                                GET IN TOUCH
                             </motion.button>
                         </Link>
                     </div>
@@ -100,7 +99,7 @@ const Navbar = () => {
                             <div className="pt-4">
                                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                                     <button className="w-full bg-sky-500 text-white font-bold py-3.5 rounded-xl text-base">
-                                        GET QUOTE
+                                        GET IN TOUCH
                                     </button>
                                 </Link>
                             </div>

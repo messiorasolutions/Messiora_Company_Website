@@ -21,10 +21,8 @@ const Blog = () => {
 
         const setStaticPosts = () => {
             setPosts([
-                { _id: 1, title: 'The Future of AI in Enterprise', content: 'Discover how artificial intelligence is transforming legacy systems into highly responsive, dynamic environments that predict and scale effortlessly with unprecedented efficiency.', category: 'AI', author: 'Dr. Alan Smith', createdAt: new Date().toISOString() },
-                { _id: 2, title: 'Optimizing React for Speed', content: 'Techniques to achieve 100 on Lighthouse. From suspense optimizations to caching deeply nested states, we dive into the world of web performance.', category: 'Web Development', author: 'Jane Doe', createdAt: new Date(Date.now() - 86400000).toISOString() },
-                { _id: 3, title: 'Cybersecurity in 2026', content: 'Zero-trust architectures and post-quantum cryptography: What to expect and how to secure your infrastructure against the next generation of digital threats.', category: 'Security', author: 'Alex Murphy', createdAt: new Date(Date.now() - 186400000).toISOString() },
-                { _id: 4, title: 'Cloud-Native Computing Trends', content: 'Kubernetes continues to evolve. Learn about the newest features designed to automate cross-cluster orchestration and massive multi-tenant scale.', category: 'Cloud Infrastructure', author: 'Sarah Lin', createdAt: new Date(Date.now() - 286400000).toISOString() },
+                { _id: 1, title: 'The Future of AI in Enterprise', content: 'Explore how artificial intelligence is transforming traditional systems into intelligent, scalable, and automated enterprise solutions. Learn how AI improves efficiency, decision-making, and business growth.', category: 'AI', createdAt: new Date().toISOString() },
+
             ]);
         };
 
@@ -42,7 +40,7 @@ const Blog = () => {
     };
 
     return (
-        <div className="pt-12 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
+        <div className="pt-32 pb-24 w-full bg-neutral-950 text-white min-h-screen relative overflow-hidden">
             {/* Background Glow */}
             <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-sky-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -88,13 +86,7 @@ const Blog = () => {
                             <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-sky-400 transition-colors leading-tight">{post.title}</h3>
                             <p className="text-gray-400 flex-grow mb-8 leading-relaxed">{post.content}</p>
 
-                            <div className="flex justify-between items-center pt-5 border-t border-neutral-800">
-                                <div className="text-gray-400 text-sm font-medium flex items-center gap-2">
-                                    <div className="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center font-bold text-sky-500 border border-neutral-700">
-                                        {post.author.charAt(0)}
-                                    </div>
-                                    <span className="text-white">{post.author}</span>
-                                </div>
+                            <div className="flex justify-end items-center pt-5 border-t border-neutral-800">
                                 <button className="text-sky-500 font-bold flex items-center group/btn hover:text-sky-400 transition-colors">
                                     Read Post <FiArrowRight className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
                                 </button>
