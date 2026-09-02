@@ -29,7 +29,7 @@ const Portfolio = () => {
             setProjects([
                 { _id: 1, title: 'Edugate Global', category: 'Website & App Development', description: 'Educational platform connecting with global study opportunities.', imageUrl: edugateImg, projectUrl: 'https://edugateglobal.com' },
                 { _id: 2, title: 'Hub & Spoke Cafe', category: 'Website & App Development', description: 'Website for Hub & Spoke Cafe provides menu showcase, online reservations.', imageUrl: hubnspokeImg, projectUrl: 'https://hubnspokecafe.com' },
-                { _id: 3, title: 'Coupang-KMART', status: 'ongoing', category: 'Point of Sales (POS) Systems', description: 'Complete Web and POS (Point of Sale) system for Coupang Lanka Korean Mart.', imageUrl: kmartImg, projectUrl: 'https://coupanglanka.com/' },
+                { _id: 3, title: 'Coupang-KMART', category: 'Point of Sales (POS) Systems', description: 'Complete Web and POS (Point of Sale) system for Coupang Lanka Korean Mart.', imageUrl: kmartImg, projectUrl: 'https://coupanglanka.com/' },
                 { _id: 4, title: 'EASY AUTO Application', category: 'Website & App Development', description: 'Vehicle buy and sell mobile application for Easy Auto.', imageUrl: easyautoImg, projectUrl: '#' }
             ]);
         };
