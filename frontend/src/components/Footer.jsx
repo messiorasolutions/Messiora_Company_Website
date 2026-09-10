@@ -57,9 +57,19 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6 uppercase tracking-widest">Connect</h4>
                         <ul className="space-y-4">
-                            <li className="flex items-center gap-3 text-gray-400">
-                                <FiMapPin className="text-sky-500 flex-shrink-0" />
-                                <span>558 High Level Rd, Pannipitiya, Sri Lanka</span>
+                            <li className="flex items-start gap-3 text-gray-400">
+                                <FiMapPin className="text-sky-500 flex-shrink-0 mt-1" />
+                                <div className="flex flex-col">
+                                    <span className="font-bold text-gray-300 text-[10px] uppercase tracking-wider mb-0.5">Sri Lanka</span>
+                                    <span>558 High Level Rd, Pannipitiya, Sri Lanka</span>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3 text-gray-400">
+                                <FiMapPin className="text-sky-500 flex-shrink-0 mt-1" />
+                                <div className="flex flex-col">
+                                    <span className="font-bold text-gray-300 text-[10px] uppercase tracking-wider mb-0.5">South Korea</span>
+                                    <span>501, 22-8, Dongbuk-ro 53-gil, Buk-gu, Daegu</span>
+                                </div>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <FiPhone className="text-sky-500 flex-shrink-0" />
