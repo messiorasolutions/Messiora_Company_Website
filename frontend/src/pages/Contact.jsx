@@ -100,8 +100,17 @@ const Contact = () => {
                                     <FiMapPin size={22} />
                                 </div>
                                 <div>
-                                    <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">Location</h4>
+                                    <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">Sri Lanka Office</h4>
                                     <p className="text-base font-bold text-white">558 High Level Rd, Pannipitiya, Sri Lanka</p>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-5 group">
+                                <div className="w-12 h-12 bg-neutral-900 rounded-2xl flex items-center justify-center text-sky-500 shadow-lg border border-neutral-800 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300">
+                                    <FiMapPin size={22} />
+                                </div>
+                                <div>
+                                    <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">South Korea Office</h4>
+                                    <p className="text-base font-bold text-white">Unit 501, 22-8, Dongbuk-ro 53-gil, Buk-gu, Daegu</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-5 group">
