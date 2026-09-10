@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiCode, FiSmartphone, FiCpu, FiGlobe, FiDatabase, FiCloud, FiCheckCircle, FiHeadphones } from 'react-icons/fi';
 import mainVideo from '../assets/main.mp4';
-import mainImage from '../assets/main.jpg';
+import mainImage from '../assets/image.png';
 
 const Home = () => {
     const fadeInUp = {
@@ -136,12 +136,9 @@ const Home = () => {
                             transition={{ duration: 0.8 }}
                             className="flex-1 w-full"
                         >
-                            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-neutral-800">
-                                <img src={mainImage} alt="Technology Integration" className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent"></div>
-                                <div className="absolute bottom-6 left-6">
-                                    <h3 className="text-white font-bold text-2xl tracking-tight">Pioneering Excellence</h3>
-                                </div>
+                            <div className="relative group flex items-center justify-center p-4">
+                                <div className="absolute inset-0 bg-blue-600/20 blur-[120px] rounded-full group-hover:bg-sky-500/30 transition-all duration-700 ease-in-out"></div>
+                                <img src={mainImage} alt="Technology Integration" className="relative z-10 w-full max-w-lg h-auto object-contain rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5 group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-700 ease-out" />
                             </div>
                         </motion.div>
 

@@ -6,6 +6,9 @@ import edugateImg from '../assets/edugateglobal.png';
 import hubnspokeImg from '../assets/hubnspoke.jpg';
 import kmartImg from '../assets/kmart.jpg';
 import easyautoImg from '../assets/easyauto.png';
+import mahaviharayaImg from '../assets/mahaviharaya.png';
+import sanghaconferenceImg from '../assets/sanghaconference.png';
+import taprobaneImg from '../assets/taprobane.png';
 
 const Portfolio = () => {
     const [projects, setProjects] = useState([]);
@@ -30,14 +33,17 @@ const Portfolio = () => {
                 { _id: 1, title: 'Edugate Global', category: 'Website & App Development', description: 'Educational platform connecting with global study opportunities.', imageUrl: edugateImg, projectUrl: 'https://edugateglobal.com' },
                 { _id: 2, title: 'Hub & Spoke Cafe', category: 'Website & App Development', description: 'Website for Hub & Spoke Cafe provides menu showcase, online reservations.', imageUrl: hubnspokeImg, projectUrl: 'https://hubnspokecafe.com' },
                 { _id: 3, title: 'Coupang-KMART', category: 'Point of Sales (POS) Systems', description: 'Complete Web and POS (Point of Sale) system for Coupang Lanka Korean Mart.', imageUrl: kmartImg, projectUrl: 'https://coupanglanka.com/' },
-                { _id: 4, title: 'EASY AUTO Application', category: 'Website & App Development', description: 'Vehicle buy and sell mobile application for Easy Auto.', imageUrl: easyautoImg, projectUrl: '#' }
+                { _id: 4, title: 'EASY AUTO Application', category: 'Website & App Development', description: 'Vehicle buy and sell mobile application for Easy Auto.', imageUrl: easyautoImg, projectUrl: '#' },
+                { _id: 5, title: 'Mahaviharaya Website', category: 'Website & App Development', description: 'Official website for Sri Lanka Mahaviharaya in South Korea.', imageUrl: mahaviharayaImg, projectUrl: 'https://mahaviharayakr.com/' },
+                { _id: 6, title: 'Sangha Conference 2027', category: 'Website & App Development', description: 'Official website for International Sangha Conference 2027.', imageUrl: sanghaconferenceImg, projectUrl: 'https://sanghaconference2027.com/' },
+                { _id: 7, title: 'Taprobane Sri Lankan Cuisine', category: 'Website & App Development', description: 'Official website for Taprobane Sri Lankan Cuisine.', imageUrl: taprobaneImg, projectUrl: 'https://taprobanechain.com/' }
             ]);
         };
 
         fetchPortfolio();
     }, []);
 
-    const categories = ['All', 'Point of Sales (POS) Systems', 'Business Automation Tools', 'Website & App Development', 'Custom Software Solutions'];
+    const categories = ['All', 'Point of Sales (POS) Systems', 'Website & App Development'];
     const filteredProjects = filter === 'All' ? projects : projects.filter(p => p.category === filter);
 
     const fadeInUp = {
