@@ -110,7 +110,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-[11px] font-black text-gray-500 uppercase tracking-[0.2em] mb-0.5">South Korea Office</h4>
-                                    <p className="text-base font-bold text-white">Unit 501, 22-8, Dongbuk-ro 53-gil, Buk-gu, Daegu</p>
+                                    <p className="text-base font-bold text-white">501, 22-8, Dongbuk-ro 53-gil, Buk-gu, Daegu</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-5 group">
